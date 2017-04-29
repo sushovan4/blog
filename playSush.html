@@ -1,0 +1,323 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+  
+  <head>
+    <!--   <\!-- Latest compiled and minified CSS -\-> -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+    <!--   <\!-- jQuery library -\-> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--   <\!-- Latest compiled JavaScript -\-> -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="playlist.js"></script>
+    
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>playSush</title>
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="style_new.css" /> -->
+    <link rel="stylesheet" type="text/css" media="screen" href="style_playList.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="bootstrap-social.css" />
+    <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+
+
+<script language="javascript" type="text/javascript"> 
+function windowClose() { 
+window.open('','_parent',''); 
+window.close();
+} 
+
+</script>
+  </head>
+  
+  <body>
+
+    <!-- Markup starts here -->
+    <div id="wrapper">
+
+      <div class="container text-center" id="audioContainer">
+	<div class="row" id ="lastDiv"><span class="glyphicon glyphicon-music" style="color: magenta; font-size: 20px;"></span></div>
+	<div class="row"><h4 id="brand">gaaNita</h4></div>
+	
+	<audio  onended="runNext( )"  id="audio">
+          <!-- <source src="1.mp3" type="audio/mp3"> -->
+	  <!--   Sorry, your browser does not support HTML5 audio. -->
+	</audio>
+        <div class="row">
+	<div class="col-xs-1"><span id="status"><span class="glyphicon glyphicon-stop"></span></span></div>	
+	<div class="col-xs-7"><marquee id="display">Hi, I am Sushovan Majhi. This simple web-based playlist application was created in January, 2017.</marquee></div>
+	<div class="col-xs-1"><span id="loopDisplay"></span></div>
+        <div class="col-xs-1"><span id="shuffleDisplay"></span></div>
+	<div class="col-xs-1"><span id="volDisplay"></span></div>
+        </div>
+
+	<div class="row" id="timeContainer">0:00</div>
+	
+	
+	<div id="controls" class="container-fluid text-center">
+	  <div class="btn-group" role="group">   
+	    <button type="button" class="btn btn-primary btn-sm transparent" onclick="play( )"><span class="glyphicon glyphicon-play"></span></button>
+	    <button type="button" class="btn btn-primary btn-sm transparent" onclick="pause( )"> <span class="glyphicon glyphicon-pause"></span></button>
+	    <button type="button" class="btn btn-primary btn-sm transparent" onclick="runPrevious( )"><span class="glyphicon glyphicon-step-backward"></span></button>
+	    <button type="button" class="btn btn-primary btn-sm transparent" onclick="backward( )"><span class="glyphicon glyphicon-backward"></span></button>
+	    <button type="button" class="btn btn-primary btn-sm transparent" onclick="forward( )"><span class="glyphicon glyphicon-forward"></span></button>   
+	    <button type="button" class="btn btn-primary btn-sm transparent" onclick="runNext( )"><span class="glyphicon glyphicon-step-forward"></span></button>
+            <button type="button" class="btn btn-primary btn-sm transparent" onclick="loop( )"><span class="glyphicon glyphicon-repeat"></span></button>
+            <button type="button" class="btn btn-primary btn-sm transparent" onclick="shuffle( )"><span class="glyphicon glyphicon-random"></span></button>
+	    <button type="button" class="btn btn-primary btn-sm transparent" onclick="down( )"> <span class="glyphicon glyphicon-volume-down"></span></button>
+	    <button type="button" class="btn btn-primary btn-sm transparent" onclick="up( )"> <span class="glyphicon glyphicon-volume-up" ></span> </button>
+	  </div>
+	</div>
+      </div>
+      
+      
+      <div class="container text-center" id="playlistArea">  
+	<div class="row">
+          <div class="btn-group" role="group">	
+            <button type="button" class="btn btn-primary btn-xs" onclick="showCurrent( );displayPlaylist( currentPlaylist );">Current</button>
+	    
+	    <div class="btn-group">
+	      <button id="btnGroupDrop1" type="button" class="btn btn-primary btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		Playlists<span class="glyphicon glyphicon-chevron-down"></span>
+	      </button>
+	      <div  id="lists" class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+	      </div>
+	    </div>
+	    
+	    
+            <button type="button"  data-toggle="collapse" data-target="#searchForm" class="btn btn-primary btn-xs">Search<span class="glyphicon glyphicon-search"></span>
+	    </button>
+	    
+	    <button type="button" class="btn btn-success btn-xs" onclick="downloadCurrent( )">Download<span class="glyphicon glyphicon-download"></span></button>
+	  </div>    
+	  
+	  <div class="btn-group" role="group">
+            <button type="button" data-toggle="collapse" data-target="#addForm" class="btn btn-primary btn-xs" >Add</button>
+	    <button type="button" data-toggle="collapse" data-target="#renameSongForm" class="btn btn-primary btn-xs" >Rename Song</button>
+	    <button type="button" data-toggle="collapse" data-target="#renamePlaylistForm" class="btn btn-primary btn-xs">Rename Playlist</button>
+	    <button type="button" data-toggle="collapse" data-target="#deleteForm" class="btn btn-danger btn-xs" >Delete</button>
+          </div>
+	  
+	</div>
+   
+      
+	<div class="row text-center" style="border-top: 1px solid white; margin-top: 10px;">
+	  
+	  <h4 id="playlistDisplay"></h4>
+	  
+	</div>
+	
+	<div class="row">
+	  <ul id="currentPlaylist" class="list-group text-left">
+	  </ul>
+	  <ul id="targetPlaylist" class="list-group text-left">
+	  </ul>
+	  
+	</div>
+	
+      </div>
+      
+      
+      
+      <div id="addForm" class="container text-center collapse">
+	
+	<form  action="playlistAppender.php" method="POST"  accept-charset="utf-8"> 
+	  <div class="form-group">
+	    <label for="url">Url here</label>
+	    <input class="form-control" id="url" name="url" placeholder="Link(required)" type="text" required>
+	  </div>
+	  
+	  <div class="form-group">
+	    <label for="song">Song</label>
+	    <input class="form-control" id="song" name="song" placeholder="Title(required)" type="text" required>
+	  </div>
+	  
+	  <div class="form-group">
+	    <label for="playlist">Playlist Here</label>
+	    <input class="form-control" id="playlist" name="playlist" placeholder="Playlist(required)" type="text" required>
+	  </div>
+	  <button type="submit" class="btn btn-primary btn-xs">Add Song</button>
+	</form>
+      </div>
+      
+      <div id="deleteForm" class="container text-center collapse">
+	
+	<form  action="playlistRemover.php" method="POST"  accept-charset="utf-8"> 
+	  
+	  <div class="form-group">
+	    <label for="song">Playlist</label>
+	    <input class="form-control" id="playlist" name="playlist" placeholder="Playlist(required)" type="text" required>
+	  </div>
+	  
+	  <div class="form-group">
+	    <label for="playlist">Song</label>
+	    <input class="form-control" id="song" name="song" placeholder="Song(optional)" type="text">
+	  </div>
+	  <button type="submit" class="btn btn-primary btn-xs">Delete</button>
+	</form>
+      </div>
+      
+      <div id="renameSongForm" class="container text-center collapse">
+	
+	<form  action="songRenamer.php" method="POST"  accept-charset="utf-8"> 
+	  
+	  <div class="form-group">
+	    <label for="playlist">Playlist</label>
+	    <input class="form-control" id="playlist" name="playlist" placeholder="Playlist(required)" type="text" required>
+	  </div>
+	  
+	  <div class="form-group">
+	    <label for="playlist">Song</label>
+	    <input class="form-control" id="oldName" name="oldName" placeholder="Old name" type="text" required>
+	  </div>
+	  
+	  <div class="form-group">
+	    <label for="playlist">New name</label>
+	    <input class="form-control" id="newName" name="newName" placeholder="New name" type="text" required>
+	  </div>
+	  
+	  <button type="submit" class="btn btn-primary btn-xs">Rename song</button>
+	</form>
+      </div>
+      
+      <div id="renamePlaylistForm" class="container text-center collapse"  accept-charset="utf-8">
+	
+	<form  action="playlistRenamer.php" method="POST"  accept-charset="utf-8"> 
+	  
+	  <div class="form-group">
+	    <label for="song">Playlist</label>
+	    <input class="form-control" id="oldName" name="oldName" placeholder="Old name" type="text" required>
+	  </div>
+	  
+	  <div class="form-group">
+	    <label for="playlist">New name</label>
+	    <input class="form-control" id="newPlaylistName" name="newName" placeholder="New name" type="text" required>
+	  </div>
+	  <button type="submit" class="btn btn-primary btn-xs">Rename playlist</button>
+	</form>
+      </div>
+
+      <div id="searchForm" class="container text-center collapse">      
+        <input id="querySong" type="text">
+        <div id="found"></div>   
+	<button  class="btn btn-primary btn-xs" onclick="searchSong( )">Search</button>
+        <button  class="btn btn-primary btn-xs" onclick="clearSearch( )">Clear</button>	
+      </div>
+      
+      <button id="timer" style="position:fixed;right:0; bottom: 20%;" type="button" class="btn btn-success btn-xs" onclick="setTimer( )">Sleep</button>
+    </div> 
+
+
+    <!--  wrapper ends here -->
+    
+    <!-- scpript area -->
+    <script>
+ 
+      loadList( );
+      dur = 0; durOut = "--:--"; loopOn = false; shuffleOn = false; playlistLen = 0; currentSong = 0;targetSong = 0;
+      showTime( ); timer = 0;
+      
+      
+      //Initializing currentplay,listcurrentSong, time, volume from browser cookie
+      cookieExists = checkCookie( );  
+      
+      //Loading audio with properties set
+      $("#audio").prop('volume',vol);
+      
+      if( cookieExists ) {
+      targetSong = currentSong;
+      loadPlaylist(currentPlaylist);
+      targetPlaylist = currentPlaylist;	
+      }
+      
+      else {
+      document.getElementById( "currentPlaylist" ).innerHTML = '<h4 style="color: red;">Please select a playlist to start...</h4>';
+      } 
+      
+      
+      //Event listeners here...................
+      $(window).unload(function( ) {
+      vol = $("#audio").prop("volume");
+      time = $("#audio").prop("currentTime");
+      setCookie("playlist", currentPlaylist );
+      setCookie("song", currentSong );
+      setCookie("time", time );
+      setCookie("volume", vol );
+      });	
+      
+      
+      
+      $('.dropdown-menu').bind('click',function(event){
+      var link = event.target;
+      targetPlaylist =  link.text;
+      showPlaylist( targetPlaylist );
+      
+      });
+      
+      
+      $('#currentPlaylist').bind('click', function(event ){
+      var link = event.target;
+      if( link.nodeName == "A"){
+      var linkParent = link.parentNode;
+      var index = 0;
+      while( (linkParent = linkParent.previousSibling) != null )
+      index++;
+      targetSong = index;
+      time = 0; dur = 0; durOut = "--:--"; document.getElementById( "display" ).innerHTML = "please wait while loading....";
+      var url =  link.getAttribute("id");
+      $("#audio").attr("src", url);
+      
+      $("#audio").prop("currentTime", 0); //This is throwing exception
+	  $("#audio").trigger('load');
+      setTimeout( mediaErrorCheck, 20000 );
+      }
+      });
+      
+      $('#targetPlaylist').bind('click', function(event ){
+      var link = event.target;
+	  if( link.nodeName == "A"){
+      var linkParent = link.parentNode;
+      var index = 0;
+      while( (linkParent = linkParent.previousSibling) != null )
+      index++;
+      currentPlaylist = targetPlaylist;
+      targetSong = index;
+      time = 0; dur = 0; durOut = "--:--"; document.getElementById( "display" ).innerHTML = "please wait while loading....";
+      loadPlaylist( targetPlaylist);
+      }
+      
+      });
+      
+      
+document.getElementById("audio").onloadstart = function ( ) {
+      var string = '<span class="glyphicon glyphicon-refresh glyphicon-download-animate" style="color: orange;"></span>';
+      document.getElementById("lastDiv").innerHTML = string;
+      }
+      
+      
+      document.getElementById("audio").onprogress = function ( ) {
+      var string =  '<span class="glyphicon glyphicon-refresh glyphicon-download-animate" style="color: green;"></span>';
+      document.getElementById("lastDiv").innerHTML =  string;
+      }
+      
+      document.getElementById("audio").onwaiting = function ( ) {
+      var string = '<span class="glyphicon glyphicon-refresh glyphicon-download-animate" style="color:green;"></span>';
+      document.getElementById("lastDiv").innerHTML = string;
+      }
+      
+      
+      document.getElementById("audio").onsuspend = function ( ) { 
+      var string = '<span class="glyphicon glyphicon-ok" style="color: green; font-size: 20;"></span>'; 
+      document.getElementById("lastDiv").innerHTML = string; 
+      }
+      
+      document.getElementById("audio").oncanplay = function ( ) {
+      play( );
+      }
+      
+      
+    </script>
+    
+    
+  </body>
+</html>
+
