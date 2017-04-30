@@ -47,7 +47,8 @@ h4 {
 }
  
 .bangla {
-    font-family: BNG, SutonnyBanglaOMJ, SolaimanLipi;
+    font-family: 'Atma', cursive;
+    /* font-family: BNG, SutonnyBanglaOMJ, SolaimanLipi; */
 }
 
 .tab-content {
