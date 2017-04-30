@@ -33,7 +33,9 @@ h4 {
 .container {
     padding: 80px 50px;
 }
-
+.bg-white {
+    background-color: white;
+}
 .bg-paleGreen {
     background-color: Turquoise;
 }
