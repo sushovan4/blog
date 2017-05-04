@@ -61,18 +61,23 @@ ul {
 .navbar {
     padding: 0px;
     margin-top: 0px;
+    padding-left: 10%;
+    padding-right: 5%;
     background-image: url("/img/back.png");
     z-index: 9999;
 }
-
-.navbar li a, .navbar .navbar-brand {
-    color: #fff !important;
+.navbar-brand {
+    font-size: 25px!important;
+}
+.navbar li a {
+    /* color: #fff !important; */
     border-left: 1px solid grey;
 }
 .navbar-nav li a:hover, .navbar-nav li.active a {
     color: #f4511e !important;
     background-color: #fff !important;
 }
+
 .navbar-default .navbar-toggle {
     border-color: transparent;
     color: #fff !important;
