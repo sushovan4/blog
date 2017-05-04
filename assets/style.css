@@ -61,16 +61,13 @@ h4 {
 .navbar {
     padding: 0px;
     margin-top: 0px;
-    /* background-color: DarkSlateGrey; */
     background-image: url("/img/back.png");
     z-index: 9999;
-    /* font-size: 15px !important; */
-    /* line-height: 1.42857143 !important; */
-    /* letter-spacing: 0px; */
 }
 
 .navbar li a, .navbar .navbar-brand {
     color: #fff !important;
+    border-left: 1px solid grey;
 }
 .navbar-nav li a:hover, .navbar-nav li.active a {
     color: #f4511e !important;
