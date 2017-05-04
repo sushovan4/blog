@@ -6,174 +6,19 @@ name: academic
 <div>
   <div class="container text-center bg-paleGreen">
     <h2>Education</h2><br>
-    <span class="glyphicon glyphicon-education logo-small"></span>
-    <ul class="nav nav-tabs">
-      <li class="active"><a data-toggle="tab" href="#school">School</a></li>
-      <li><a data-toggle="tab" href="#ugrad">UG</a></li>
-      <li><a data-toggle="tab" href="#pgrad">PG</a></li>
-      <li><a data-toggle="tab" href="#phd">PhD</a></li>
-      
-    </ul>
-    <div class="tab-content" >
-      <div id="school" class="tab-pane fade in active">
-	<div class="row">
-	  <div class="col-sm-4">
-	    <img src="{{ "img/sheakhala.jpg" | relative_url }}" class="img-circle" width="100%">
-	  </div>
-	  <div class="col-sm-8">
-	    <h4>Seakhala Benimadhab Higher Secondary School</h4>
-	    <p class="text-left">This higher secondary school is situated about 3 miles away from the farming village that
-	      I was born at in the Indian state of West Bengal. Eight years at this school brought to me many valuable things including some genuine friends. I wish
-	      I had made some more. I did not know that good friends are the rarest things one can find! 
-	    </p>
-	  </div>
-	</div>
-      </div>
-      
-      <div id="ugrad" class="tab-pane fade">
-	<div class="row">
-	  <div class="col-sm-4">
-	    <img src="{{ "img/vidya.jpg" | relative_url }}" class="img-circle" width="100%">
-	  </div>
-	  <div class="col-sm-8">
-	    <h4>Ramakrishna Mission Vidyamandira</h4>
-	    <p>Belur, Howrah, West Bengal, India</p>
-	  </div>
-	</div>
-      </div>
-      
-      <div id="pgrad" class="tab-pane fade">
-	<div class="row">
-	  <div class="col-sm-4">
-	    <img src="{{ "img/tifr.jpg" | relative_url }}" class="img-circle" width="103%">
-	  </div>
-	  <div class="col-sm-8">
-	    <h4>Tata Institute Of Fundamental Research-Center For
-	      Applicable Mathematics</h4>
-	    <p>Sharadanagar, Chikkabommasandra, Bangalore-65, India</p>
-	  </div>
-	</div>
-      </div>
-      
-      <div id="phd" class="tab-pane fade">
-	<div class="row">
-	  <div class="col-sm-4">
-	    <img src="{{ "img/tulane.jpg" | relative_url }}" class="img-circle" width="103%">
-	  </div>
-	  <div class="col-sm-8">
-	    <h4>Tulane University</h4>
-	    <p>New Orleans, LA, USA</p>
-	  </div>
-	  </div>
-      </div>
-      
-    </div>  
+    {% include education.html %}
   </div>
   
-  
   <!-- Research Section -->
-  <div id="research">
-    <div class="container text-center bg-tomato">
-      <h2>Reasearch</h2><br>
-      
-      <h4> I am primarily interested in <strong>Applied Topology</strong>
-	and
-	<strong>Computational Geometry</strong>. Right now,
-	I am working on a theoretical and an applied project.</h4>
-      <h4 class="slideanim text-left">The first one falls under the umbrella of <strong>Random Topology</strong>, which involves
-	considering topological invariants as random variables and describing their distributions.</h4>
-      <h4 class="slideanim text-left"> My other project deals with analyzing big data(prostate cancer patient \
-	  data) using tools from
-	<strong>Topological Data Analysis(TDA)</strong> and
-	<strong>Machine Learning</strong>.
-	</h4>
-      
-      </div>
+  <div class="container text-center bg-tomato">
+    <h2>Reasearch</h2><br>
+    {% include research.html %}
   </div>
   <!-- Research ends here -->
   
-  <div id="teaching">
-      <div class="container text-center bg-springGreen">
-	<h2>Teaching</h2><br>
-	<span class="glyphicon glyphicon-book logo-small"></span><br>
-	<h4 style="text-align: left">I have been assigned TA at <strong>Tulane</strong> every semester since the Fall semester of 2014. Here is a list of the classes that
-	  I have been TA for.
-	  
-	</h4>
-	<div class="panel-group" id="accordion">
-	  <div class="panel panel-default">
-	    <div class="panel-heading">
-	      <h4 class="panel-title">
-		<a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-		  Fall, 2014</a>
-	      </h4>
-	    </div>
-	    <div id="collapse1" class="panel-collapse collapse">
-	      <div class="panel-body">Statistics For Scientists</div>
-	    </div>
-	  </div>
-	  
-	<div class="panel panel-default">
-	  <div class="panel-heading">
-	    <h4 class="panel-title">
-	      <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-		Spring, 2015</a>
-	    </h4>
-	  </div>
-	  <div id="collapse2" class="panel-collapse collapse">
-	    <div class="panel-body">Statistics For Scientists</div>
-	  </div>
-	</div>
-	
-	<div class="panel panel-default">
-	  <div class="panel-heading">
-	    <h4 class="panel-title">
-	      <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-		Fall, 2015</a>
-	    </h4>
-	  </div>
-	  <div id="collapse3" class="panel-collapse collapse">
-	    <div class="panel-body">Statistics For Scientists</div>
-	  </div>
-	</div>
-      
-	<div class="panel panel-default">
-	  <div class="panel-heading">
-	    <h4 class="panel-title">
-	      <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
-		Spring, 2016</a>
-	    </h4>
-	  </div>
-	  <div id="collapse4" class="panel-collapse collapse">
-	    <div class="panel-body">Statistics For Scientists</div>
-	  </div>
-	</div>
-	
-	<div class="panel panel-default">
-	  <div class="panel-heading">
-	    <h4 class="panel-title">
-	      <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
-		Fall, 2016</a>
-	    </h4>
-	  </div>
-	  <div id="collapse5" class="panel-collapse collapse">
-	    <div class="panel-body">Consolidated Calculus</div>
-	  </div>
-	</div>
-      </div>
-
-      <div class="panel panel-default">
-	  <div class="panel-heading">
-	    <h4 class="panel-title">
-	      <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">
-		Spring, 2017</a>
-	    </h4>
-	  </div>
-	  <div id="collapse6" class="panel-collapse collapse in">
-	    <div class="panel-body">Statistics For Business</div>
-	  </div>
-	</div>
-      </div>
-      </div>
+  <div class="container text-center bg-springGreen">
+    <h2>Teaching</h2><br>
+    {% include teaching.html %}
+  </div>
       
  
