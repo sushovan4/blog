@@ -1,0 +1,21 @@
+{% for posts in post.categories %}
+    <div class="panel panel-default">
+      <div class="panel-heading">
+	<h4 class="panel-title">
+	  <a data-toggle="collapse" data-parent="#accordion" href="#{{ category[0] }}">
+	    {{ category[0] }}</a>
+	</h4>
+      </div>
+      
+      <div id="{{ category[0] }}" class="panel-collapge collapse">
+	<div class="panel-body">
+	  {% assign posts = category[1] %}
+	  {% for post in posts %}
+	  <h5 class="{{ post.language }}"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h5>
+	  {% endfor %}
+	</div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

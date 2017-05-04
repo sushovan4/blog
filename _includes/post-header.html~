@@ -1,0 +1,27 @@
+<!-- Navibar bar setup -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+      </button>
+
+      <a class="navbar-brand" href="{{ "index.html" | relative_url }}">Sushovan Majhi</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+	<li class="{{ home }}"><a href="{{ "index.html" | relative_url }}">Home</a></li>
+	<li><a href="{{ "/assets/Sush_CV.pdf" | relative_url }}">CV</a></li>
+	<li class="{{ academic }}"><a href="{{ "assets/academic.html" | relative_url }}">Academic</a></li>
+	<li class="{{ blog }}"><a href="{{ "assets/blog.html" | relative_url }}">Blog</a></li>
+	<li><a href="http://nita.subhonita.com">আলেয়া </a></li>
+      </ul>
+    </div>
+    <div class="scroll-progress-container">
+      <div class="scroll-progress"></div>
+    </div>
+  </div>
+</nav>
+<!-- Navibar ends here -->

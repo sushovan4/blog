@@ -1,0 +1,10 @@
+<!DOCTYPE HTML>
+<html  xml:lang="en" >
+  {% include head.html %}
+  
+  <body>
+    {% include post-header.html %}
+    {{ content }}
+    {% include footer.html %}
+  </body>
+</html>
