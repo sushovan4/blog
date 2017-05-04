@@ -1,3 +1,10 @@
+/* This is my script file */
+/* Sushovan Majhi */
+function topFunc( ) {
+	document.body.scrollTop = 0;
+	document.documentElement.scrollTop  = 0;
+    }
+
 $(document).ready(
     function() {
 	var docHeight = $(document).height(),
@@ -35,8 +42,9 @@ $(document).ready(function(){
 		var hash = this.hash;
 	    
 	    // Using jQuery's animate() method to add smooth page scroll
-	    // The optional number (900) specifies the number of milliseconds it takes to scroll to the s\
-	    pecified area
+	    // The optional number (900) specifies the number of milliseconds it
+	    //takes too scroll to the specified area
+
 	    $('html, body').animate({
 		scrollTop: $(hash).offset().top
 	    }, 900, function(){

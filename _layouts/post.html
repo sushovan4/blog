@@ -1,19 +1,20 @@
 ---
-layout: default
+layout: page
 ---
-<div class="container">
-  <div class="{{ page.language }} post">
-    <h1 >{{ page.title | escape }}</h1>
-    <p class="post-meta">
+<div class="container text-center">
+  <div class="{{ page.language }}">
+    <h1>{{ page.title | escape }}</h1>
+    <h4>
       <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
 	{% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
 	{{ page.date | date: date_format }}
       </time>
       {% if page.author %}
       • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
-      {% endif %}</p>
-
-    <div id="post-content">
+      {% endif %}</h4>
+    <hr>
+    
+    <div class="post-container text-left">
       {{ content }}
     </div>
     
@@ -51,7 +52,19 @@ layout: default
     </div>
     {% endif %}
   </div>
-  
+  <hr>
+</div>
+
+<!-- <div class="container"> -->
+<!--   <div class="list-container"> -->
+<!--     {% include index-of-posts.html %} -->
+<!--   </div> -->
+<!-- </div> -->
+<div class="">
+  {% include button-group.html %}
+</div>
+
+<div class="container text-center">
   {% if page.comments %}
   {% include comments.html %}
   {% endif %}

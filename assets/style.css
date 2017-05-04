@@ -1,29 +1,13 @@
 /*--This is my style file --*/
 /* Sushovan Majhi */
-
 body {
-    /* background-image: url("back.png"); */
+    padding: 1px;
     font-family: Modern Antiqua;
-    font-family: 'Playfair Display', serif;
     font-family: 'Gentium Book Basic', serif;
-    line-height: 1.8;
-    color: #818181;
 }
 
-h2 {
-    font-size: 24px;
-    text-transform: uppercase;
-    color: #303030;
-    font-weight: 600;
-    margin-bottom: 30px;
-}
-
-h4 {
-    font-size: 19px;
-    line-height: 1.375em;
-    color: #303030;
-    font-weight: 400;
-    margin-bottom: 20px;
+ul {
+    list-style: none;
 }
 
 .container-fluid {
@@ -32,6 +16,22 @@ h4 {
 
 .container {
     padding: 80px 50px;
+}
+
+.navigation-button-group {
+    position: fixed;
+    right: 2px;
+    bottom: 40%;
+}
+.list-container {
+    box-shadow: 2px 2px 5px #888888;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.post-container {
+    font-size: 20px;
 }
 .bg-white {
     background-color: white;
@@ -48,7 +48,7 @@ h4 {
     background-color: MediumPurple;
 }
  
-.bangla {
+.Bengali {
     font-family: 'Atma', cursive;
     /* font-family: BNG, SutonnyBanglaOMJ, SolaimanLipi; */
 }
@@ -153,4 +153,48 @@ h4 {
     width: 0px;
     height: 5px;
     background-color: green;
+}
+
+.footer {
+    background-color: #091830;
+    color: grey;
+}
+
+/* Style all font awesome icons */
+.fa {
+    padding: 15px;
+    font-size: 5px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+    opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+.fa-google {
+    background: #dd4b39;
+    color: white;
+}
+
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+
+/* Facebook */
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
 }
