@@ -53,19 +53,11 @@ layout: page
     {% endif %}
   </div>
   <hr>
-</div>
-
-<!-- <div class="container"> -->
-<!--   <div class="list-container"> -->
-<!--     {% include index-of-posts.html %} -->
-<!--   </div> -->
-<!-- </div> -->
-<div class="">
-  {% include button-group.html %}
-</div>
-
-<div class="container text-center">
-  {% if page.comments %}
+   {% if page.comments %}
   {% include comments.html %}
   {% endif %}
+</div>
+
+<div class="">
+  {% include button-group.html %}
 </div>
