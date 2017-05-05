@@ -3,22 +3,6 @@
   {% include head.html %}
   
   <body>
-    {% case page.name %}
-
-    {% when "academic" %}
-    {% assign academic = "active" %}
-    
-    {% when "home" %}
-    {% assign home = "active" %}
-
-    {% when "blog" %}
-    {% assign blog = "active" %}
-   
-    {% endcase %}
-
-    <!-- {% if page.name contains 'academic' %} -->
-    <!--  {% assign academic = "active" %} -->
-    <!-- {% endif %} -->
     {% include header.html %}
     {{ content }}
     {% include footer.html %}

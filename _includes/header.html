@@ -1,4 +1,14 @@
 <!-- Navibar bar setup -->
+
+{% case page.site-name %}
+{% when "home" %}
+{% assign home = "active" %}
+{% when "academic" %}
+{% assign academic = "active" %} 
+{% when "blog" %}
+{% assign blog = "active" %}
+{% endcase %}
+
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid text-center">
     <div class="navbar-header">
@@ -15,9 +25,9 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
 	<li class="{{ home }}"><a href="{{ "index.html" | relative_url }}">Home</a></li>
-	<li><a href="{{ "/assets/Sush_CV.pdf" | relative_url }}">CV</a></li>
 	<li class="{{ academic }}"><a href="{{ "assets/academic.html" | relative_url }}">Academic</a></li>
 	<li class="{{ blog }}"><a href="{{ "assets/blog.html" | relative_url }}">Blog</a></li>
+	<li><a href="{{ "/assets/Sush_CV.pdf" | relative_url }}">CV</a></li>
 	<li><a href="http://nita.subhonita.com">আলেয়া </a></li>
       </ul>
     </div>
