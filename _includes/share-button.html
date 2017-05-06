@@ -3,7 +3,7 @@
       <span class="glyphicon glyphicon-share"></span>
     </button>
 
-    {%- capture share-url -%}
+    {%- capture share-url %}
     {{ post.url | relative_ url | prepend: site.url }}
     {% endcapture %}
 
