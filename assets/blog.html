@@ -1,6 +1,6 @@
 ---
 layout: default-blog
-title: Sushovan Majhi( Just Blogging )
+title: Sushovan Majhi (Just Blogging)
 ---
 <div class="container">
   <div class="wrapper">
@@ -8,13 +8,23 @@ title: Sushovan Majhi( Just Blogging )
       {% for post in site.posts %}
       <li>
 	{% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-	<span>{{ post.date | date: date_format }}</span>
+	<div class="row">
+	  <div class="col-xs-4">
+	    <span>Date: {{ post.date | date: date_format }}</span>
+	    <h4>Author: {{ post.author }}</h4>
+	  </div>
+	  
+	  <div class="col-xs-offset-6 col-xs-2">
+	    {% include share-button.html %}
+	  </div>
+	</div>
 	
 	<div class=" {{ post.language}} ">
 	  <h4>
 	    <a href="{{ post.url | relative_url }}">{{ post.title | escape }}
 	  </a></h4>
 	  <h5>{{ post.excerpt }}</h5>
+	  <a href="{{ post.url | relative_url }}">Read more...</a>
 	</div>
       </li>
       <hr>

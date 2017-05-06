@@ -1,5 +1,5 @@
-  <div class="panel-group" id="accordion" style="color: black">
-      
+<div class="panel-group" id="accordion" style="color: black">
+  
     {% for category in site.categories %}
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -13,10 +13,11 @@
 	<div class="panel-body">
       	  {% assign posts = category[1] %}
       	  {% for post in posts %}
-      	  <h4 class="{{ post.language }}"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
+      	  <h5 class="{{ post.language }}"><a class="weblink" href="{{ post.url | relative_url }}">{{ post.title }}</a></h5>
       	  {% endfor %}
 	</div>
       </div>
     </div>
     {% endfor %}
-  </div>
+
+</div>

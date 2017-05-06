@@ -1,5 +1,6 @@
 /* This is my script file */
 /* Sushovan Majhi */
+
 function topFunc( ) {
 	document.body.scrollTop = 0;
 	document.documentElement.scrollTop  = 0;
