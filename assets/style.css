@@ -1,7 +1,6 @@
 /*--This is my style file --*/
 /* Sushovan Majhi */
 body {
-    padding: 1px;
     font-family: Modern Antiqua;
     font-family: 'Gentium Book Basic', serif;
 }
@@ -31,8 +30,9 @@ ul {
 }
 
 .post-container {
-    font-size: 20px;
+    font-size: 15px;
 }
+
 .bg-white {
     background-color: white;
 }
@@ -58,6 +58,25 @@ ul {
     margin: 5px;
 }
 
+.my-nav{
+    margin-top: 0;
+    position: fixed;
+    right: 0px;
+    left: 0px;
+    font-size: 25px;
+    background-color: lightgrey;
+    padding: 5px;
+}
+.nav-left {
+    position: absolute;
+    left: 30px;
+}
+.nav-right {
+    position: absolute;
+    right: 30px;
+}
+
+
 .navbar {
     padding: 0px;
     margin-top: 0px;
@@ -81,7 +100,6 @@ ul {
     border-color: transparent;
     color: #fff !important;
 }
-
 .slideanim {visibility:hidden;}
 .slide {
     animation-name: slide;

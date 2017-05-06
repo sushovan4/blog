@@ -1,9 +1,10 @@
 ---
-layout: page
+layout: default-post
 ---
+<div id="top"></div>
 <div class="container text-center">
-  <div class="{{ page.language }}">
-    <h1>{{ page.title | escape }}</h1>
+  <div class="wrapper {{ page.language }}">
+    <h2>{{ page.title | escape }}</h2>
     <h4>
       <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
 	{% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
@@ -53,11 +54,7 @@ layout: page
     {% endif %}
   </div>
   <hr>
-   {% if page.comments %}
+  {% if page.comments %}
   {% include comments.html %}
   {% endif %}
-</div>
-
-<div class="">
-  {% include button-group.html %}
 </div>

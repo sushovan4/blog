@@ -1,38 +1,24 @@
 ---
-layout: default
-site-name: blog
+layout: default-blog
+title: Sushovan Majhi( Just Blogging )
 ---
 <div class="container">
-  <div class="row">
-
-    <div class="col-md-8">
-      <div class="list-container">
-	<h3>My Posts</h3><hr>
+  <div class="wrapper">
+    <ul>
+      {% for post in site.posts %}
+      <li>
+	{% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+	<span>{{ post.date | date: date_format }}</span>
 	
-	<ul>
-	  {% for post in site.posts %}
-	  <li>
-	    {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-	    <span>{{ post.date | date: date_format }}</span>
-	    
-	    <div class=" {{ post.language}} ">
-	      <h3>
-		<a href="{{ post.url | relative_url }}">{{ post.title | escape }}
-		</a></h3>
-		  <h4>{{ post.excerpt }}</h4>
-	    </div>
-	  </li>
-	  <hr>
-	  {% endfor %}
-	</ul>
-      </div>
-    </div>
-    
-    <div class="col-md-4">
-      <div class="list-container">
-	<h3>Categories</h3><hr>
-	{% include index-of-posts.html %}
-      </div>
-    </div>
+	<div class=" {{ post.language}} ">
+	  <h4>
+	    <a href="{{ post.url | relative_url }}">{{ post.title | escape }}
+	  </a></h4>
+	  <h5>{{ post.excerpt }}</h5>
+	</div>
+      </li>
+      <hr>
+      {% endfor %}
+    </ul>
   </div>
 </div>
