@@ -5,13 +5,13 @@ layout: default-blog
 <div class="container">
   <div class="wrapper text-center" style="min-height: 400px;">
     <button class="btn btn-transparent" onclick="window.location.href='{{ "assets/blog.html" |relative_url }}'">
-      <h4><span class="glyphicon glyphicon-menu-left"></span></h4>
+      <h4><span class="glyphicon glyphicon-menu-left"></span>Back</h4>
       </button>
     <form action="{{ "/assets/search.html" | relative_url }}" method="get">
       <!-- <label for="search-box"><h4>Search: </h4></label> -->
       <input  type="text" id="search-box" name="query" placeholder="search">
       <button class="btn btn-primary btn-circle" type="submit">
-	<span class="glyphicon glyphicon-search"></span>
+	<span class="glyphicon glyphicon-menu-right"></span>
       </button>
       
     </form> 

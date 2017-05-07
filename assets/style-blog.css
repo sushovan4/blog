@@ -5,6 +5,7 @@ html, body {
     font-family: 'Gentium Book Basic', serif;
     
 }
+
 body {
     /* background-image: url("/img/shyamal.jpg"); */
     background-image: url("/img/track.jpg");
@@ -14,6 +15,7 @@ body {
     background-attachment: fixed;
     background-size: cover;
 }
+
 ul {
     list-style: none;
 }
