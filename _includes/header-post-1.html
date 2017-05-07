@@ -2,19 +2,25 @@
   <div class="row">
     
     <div class="col-xs-2">
-      <a href="{{ "/assets/blog.html" | relative_url }}"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <button
+	 class="btn btn-transparent"
+	 onclick="window.location.href='{{ "/assets/blog.html" | relative_url }}'">
+	<h4><span class="glyphicon glyphicon-menu-left"></span></h4></button>
     </div>
     
-    <div class="col-xs-7">
+    <div class="col-xs-6">
       <h4>{{ page.title }}</h4>
     </div>
 
-    <div class="col-xs-1">
+    <div class="col-xs-2">
       {% include share-button.html %}
     </div>
 
     <div class="col-xs-2">
-      <a href="#top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+      <button
+	 class="btn btn-transparent"
+	 onclick="window.location.href='#top'">
+	<h4><span class="glyphicon glyphicon-menu-up"></span></h4></button>
     </div>
     
   </div>

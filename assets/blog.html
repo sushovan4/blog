@@ -9,12 +9,12 @@ title: Sushovan Majhi (Just Blogging)
       <li>
 	{% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
 	<div class="row">
-	  <div class="col-xs-4">
+	  <div class="col-xs-8">
 	    <span>Date: {{ post.date | date: date_format }}</span>
-	    <h4>Author: {{ post.author }}</h4>
+	    <h5>{{ post.author }}</h5>
 	  </div>
 	  
-	  <div class="col-xs-offset-6 col-xs-2">
+	  <div class="col-xs-2">
 	    {% include share-button.html %}
 	  </div>
 	</div>

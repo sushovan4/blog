@@ -6,7 +6,8 @@ html, body {
     
 }
 body {
-    background-image: url("/img/shyamal.jpg");
+    /* background-image: url("/img/shyamal.jpg"); */
+    background-image: url("/img/track.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-origin: padding-box;
@@ -91,10 +92,10 @@ ul {
 }
 
 .navbar {
-    background: transparent;
-    /* opacity: 0.4; */
+    opacity: 0.7;
     display: block;
     text-align: center;
+   
 }
 .navbar-brand {
     display: inline-block;
@@ -184,10 +185,26 @@ ul {
     color: white;
 }
 
-.input-anim {
-    width: 80px;
+#search-box {
+    width: 70%;
+    border-radius: 3px;
+    border: 1px solid lightblue;
+    padding: 7px;
 }
 
-.input-anim:hover {
-    width: 70%;
+.btn-circle {
+    background: transparent;
+    color: #448cff;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 14px;
+    line-height: 1.428571429;
+    border-radius: 20px;
+}
+.btn-transparent {
+    background: transparent;
+    color: #448cff;
+    padding: 6px 6px 6px 6px;
 }

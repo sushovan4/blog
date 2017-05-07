@@ -220,3 +220,20 @@ ul {
     background: #55ACEE;
     color: white;
 }
+
+.btn-circle {
+    background: transparent;
+    color: #448cff;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 14px;
+    line-height: 1.428571429;
+    border-radius: 20px;
+}
+.btn-transparent {
+    background: transparent;
+    color: #448cff;
+    padding: 6px 6px 6px 6px;
+}

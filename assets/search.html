@@ -3,26 +3,24 @@ layout: default-blog
 ---
 
 <div class="container">
-  
-  <div class="wrapper" style="min-height: 400px;">
-    <h3><a href="{{ "/assets/blog.html" | relative_url }}"><span class="glyphicon glyphicon-menu-left"></span></a></h3>
-    <form action="{{ "/assets/search.html" | relative_url }}" method="get">
-      <label for="search-box"><h4>Search</h4></label>
-      <input onclick="expand( )" type="text" id="search-box" name="query" placeholder="search">
-      <button class="btn btn-success" type="submit">
-    	<span class="glyphicon glyphicon-search"></span>
+  <div class="wrapper text-center" style="min-height: 400px;">
+    <button class="btn btn-transparent" onclick="window.location.href='{{ "assets/blog.html" |relative_url }}'">
+      <h4><span class="glyphicon glyphicon-menu-left"></span></h4>
       </button>
-    </form>
-    
-    <ul id="search-results"></ul>
+    <form action="{{ "/assets/search.html" | relative_url }}" method="get">
+      <!-- <label for="search-box"><h4>Search: </h4></label> -->
+      <input  type="text" id="search-box" name="query" placeholder="search">
+      <button class="btn btn-primary btn-circle" type="submit">
+	<span class="glyphicon glyphicon-search"></span>
+      </button>
+      
+    </form> 
+    <ul class="text-left" id="search-results"></ul>
   </div>
 </div>
 
 <script>
-  function expand( ){
-  var elm = document.getElementById("search-box");
-  elm.style.width = "70%";
-  }
+
   window.store = {
   {% for post in site.posts %}
   "{{ post.url | slugify }}": {
