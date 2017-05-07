@@ -4,7 +4,7 @@
   </button>
   
   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-    <a target="_blank" class="dropdown-item" href="https://plus.google.com/share?url={% if post.title %}{{ post.url | absolute_url }}{% else %}{{ page.url | absolute_url }}{% endif %}">Facebook</a><br>
+    <a target="_blank" class="dropdown-item" href="https://www.facebook.com/sharer/sharer.php?url={% if post.title %}{{ post.url | absolute_url }}{% else %}{{ page.url | absolute_url }}{% endif %}">Facebook</a><br>
     <a target="_blank" class="dropdown-item" href="https://plus.google.com/share?url={% if post.title %}{{ post.url | absolute_url }}{% else %}{{ page.url | absolute_url }}{% endif %}">Google+</a> 
   </div>
 </div>
