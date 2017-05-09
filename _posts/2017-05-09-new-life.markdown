@@ -1,6 +1,6 @@
 ---
 title: পুনর্জন্ম
-commments: true
+comments: true
 language: Bengali
 ---
 Hi
