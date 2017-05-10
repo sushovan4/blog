@@ -1,8 +1,8 @@
-<div class="navmenu navmenu-default navmenu-fixed-left offcanvas-sm text-center"> 
-  <button class="btn btn-primary btn-circle visible-md visible-lg" onclick="window.location.href='{{ "assets/search.html" |relative_url }}'">
+<div class="navmenu navmenu-default navmenu-fixed-left offcanvas-sm text-center" role="navigation"> 
+  <button class="btn btn-primary btn-circle visible-md visible-lg"
+	  onclick="window.location.href='{{ "/search.html" |relative_url }}'">
     <span class="glyphicon glyphicon-search">
   </span></button>
-  
     {% include about-me.html %}
 </div>
 
@@ -14,7 +14,7 @@
       <span class="icon-bar"></span>
     </button>
     <a class="navbar-brand" href="{{ "assets/blog.html" | relative_url }}">Sushovan Majhi</a>
-    <button class="btn btn-primary btn-circle" onclick="window.location.href='{{ "assets/search.html" |relative_url }}'">
+    <button class="btn btn-primary btn-circle" onclick="window.location.href='{{ "/search.html" |relative_url }}'">
       <span class="glyphicon glyphicon-search">
       </span>
     </button>

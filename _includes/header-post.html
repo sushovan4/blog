@@ -1,9 +1,28 @@
-<div class="navmenu navmenu-default navmenu-fixed-left 
-offcanvas-sm text-center">
-  {% include about-me.html %}
+<div class="my-nav text-center">
+  <div class="row">
+    
+    <div class="col-xs-2">
+      <button
+	 class="btn btn-transparent"
+	 onclick="window.location.href='{{ "/blog.html" | relative_url }}'">
+	<h4><span class="glyphicon glyphicon-menu-left"></span></h4></button>
+    </div>
+    
+    <div class="col-xs-6">
+      <h4 class="{{ page.language }}">{{ page.title }}</h4>
+    </div>
+
+    <div class="col-xs-2">
+      {% include share-button.html %}
+    </div>
+
+    <div class="col-xs-2">
+      <button
+	 class="btn btn-transparent"
+	 onclick="window.location.href='#top'">
+	<h4><span class="glyphicon glyphicon-menu-up"></span></h4></button>
+    </div>
+    
+  </div>
 </div>
 
-<div class="navbar navbar-default navbar-fixed-top">
-  <a class="navbar-toggle" href="{{ "/assets/blog.html" | relative_url }}"><span class="glyphicon glyphicon-chevron-left"></span></a>
-  <a class="navbar-brand" href="{{ "assets/blog.html" | relative_url }}">Sushovan Majhi</a>
-</div>
