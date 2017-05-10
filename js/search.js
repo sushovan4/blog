@@ -1,14 +1,14 @@
 (function() {
     function displaySearchResults(results, store) {
 	var searchResults = document.getElementById('search-results');
-
+	
 	if (results.length) { // Are there any results?
 	    var appendString = '';
-
+	    
 	    for (var i = 0; i < results.length; i++) {  // Iterate over the results
 		var item = store[results[i].ref];
-		appendString += '<li><a href="' + item.url + '"><h4>' + item.title + '</h4></a>';
-		appendString += '<p>' + item.content.substring(0, 150) + '...</p></li><hr>';
+		appendString += '<li><a class="' + item.language + '" href="' + item.url  + '"><h4>' + item.title + '</h4></a>';
+		appendString += '<h5 class="' + item.language + '">' + item.excerpt + '...</h5></li><hr>';
 	    }
 
 	    searchResults.innerHTML = appendString;

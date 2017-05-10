@@ -28,7 +28,9 @@ layout: blog
   "author": "{{ post.author | xml_escape }}",
   "category": "{{ post.category | xml_escape }}",
   "content": {{ post.content | strip_html | strip_newlines | jsonify }},
-  "url": "{{ post.url | xml_escape }}"
+  "url": "{{ post.url | relative_url }}",
+  "language": "{{ post.language }}",
+  "excerpt": "{{ post.excerpt }}"
   }
   {% unless forloop.last %},{% endunless %}
   {% endfor %}
