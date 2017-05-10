@@ -6,4 +6,5 @@ language: Bengali
 author: Sushovan Majhi
 categories: Bengali Introspection
 published: true
+excerpt: Default
 ---
