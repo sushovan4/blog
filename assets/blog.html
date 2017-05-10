@@ -19,11 +19,11 @@ title: Sushovan Majhi (Just Blogging)
 	  </div>
 	</div>
 	
-	<div class=" {{ post.language}} ">
-	  <h4>
+	<div>
+	  <h4 class="{{ post.language}}">
 	    <a href="{{ post.url | relative_url }}">{{ post.title | escape }}
 	  </a></h4>
-	  <h5>{{ post.excerpt }}</h5>
+	  <h5 class="{{ post.language}}">{{ post.excerpt }}</h5>
 	  <a href="{{ post.url | relative_url }}">Read more...</a>
 	</div>
       </li>

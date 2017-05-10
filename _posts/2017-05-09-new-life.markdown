@@ -1,6 +1,9 @@
 ---
+layout: post
 title: পুনর্জন্ম
 comments: true
 language: Bengali
+author: Sushovan Majhi
+categories: Bengali Introspection
+published: true
 ---
-Hi

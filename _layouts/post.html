@@ -3,8 +3,8 @@ layout: default-post
 ---
 <div id="top"></div>
 <div class="container text-center">
-  <div class="wrapper {{ page.language }}">
-    <h2>{{ page.title | escape }}</h2>
+  <div class="wrapper">
+    <h2 class="{{ page.language }}">{{ page.title | escape }}</h2>
     <h4>
       <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
 	{% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
@@ -15,7 +15,7 @@ layout: default-post
       {% endif %}</h4>
     <hr>
     
-    <div class="post-container text-left">
+    <div class="post-container text-left {{ page.language }}">
       {{ content }}
     </div>
     
