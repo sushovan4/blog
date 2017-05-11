@@ -10,11 +10,11 @@ excerpt: Markdown is a type of Markup that is very easy to use. This markup lang
 comments: true
 ---
 ## Highlighting
-{% highlight ruby %}
+```ruby
 def foo
  puts 'foo'
 end  
-{% endhighlight %}
+```
 
 ## Font-size
 ------
