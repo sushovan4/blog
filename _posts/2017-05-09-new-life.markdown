@@ -6,5 +6,6 @@ language: Bengali
 author: Sushovan Majhi
 categories: Bengali Introspection
 published: true
-excerpt: Default
+excerpt: 
 ---
+মাঝে মাঝে চলার ছন্দটা খুব মন্থর হয়ে যায়। চলতে চলতে পা যেন আর চলে না। অনেক অনেক পুরোনো স্মৃতি, অভিজ্ঞতা, বিশ্বাস -- অনেকটা তআর অবাঞ্ছিত ও  প্রত্যাশিত। 
