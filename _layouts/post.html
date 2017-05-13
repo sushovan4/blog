@@ -3,15 +3,20 @@ layout: default-post
 ---
 <div id="top"></div>
 <div class="container text-center">
-  <h2 class="{{ page.language }}">{{ page.title | escape }}</h2>
+  <h3 class="{{ page.language }}">{{ page.title | escape }}</h3>
   <h4>
     <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
       {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
       {{ page.date | date: date_format }}
     </time>
+    &#9752;
     {% if page.author %}
-    • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
+    {{ page.author }}
     {% endif %}</h4>
+
+   <h4>Category: {% include categories.html %}</h4>
+  Tags: {% include tags.html %}
+  
   <hr>
   
   <div class="post-container text-left {{ page.language }}">

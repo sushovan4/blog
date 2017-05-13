@@ -1,0 +1,41 @@
+{% if post.categories %}
+{% for cat in post.categories %}
+<button class="btn btn-secondary">{{ cat }}</button>
+{% endfor %}
+
+{% else %}
+
+{% for cat in page.categories %}
+<button class="btn btn-primary" type="button" data-toggle="modal"
+	data-target="#cat-{% increment counter %}">
+  {{ cat }}  <span class="glyphicon glyphicon-menu-down"></span>
+</button>
+
+<div class="modal fade" role="dialog" id="cat-{{ counter | minus: 1 }}">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+	<button type="button" class="close" data-dismiss="modal">&times;</button>
+	<h4>All Posts in <i>{{ cat }}</i></h4>
+      </div>
+      
+      <div class="modal-body text-left">
+	{% assign this = site.categories.[cat] %}
+	<ul>	  
+	  {% for post in this  %}
+	  <li><h5><a class="{{ post.language }}"
+		 href="{{post.url | relative_url }}">{{ post.title }}</a></h5></li>
+	  {% endfor %}
+	</ul>
+      </div>
+      
+      <div class="modal-footer">
+	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+      
+    </div>
+  </div>  
+</div>
+
+{% endfor %}
+{% endif %}

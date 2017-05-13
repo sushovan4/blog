@@ -27,21 +27,6 @@ ul {
     font-size: 18px;
 }
 
-.bg-white {
-    background-color: white;
-}
-.bg-paleGreen {
-    background-color: Turquoise;
-}
-
-.bg-springGreen {
-    background-color: SpringGreen;
-}
-
-.bg-tomato {
-    background-color: MediumPurple;
-}
- 
 .Bengali {
     font-family: 'Atma', cursive;
     /* font-family: BNG, SutonnyBanglaOMJ, SolaimanLipi; */
@@ -57,9 +42,9 @@ ul {
     right: 0px;
     left: 0px;
     font-size: 25px;
-    background-color: RosyBrown;
-    opacity: 0.9;
-    color: white;
+    background-color: Gainsboro;
+    opacity: 0.95;
+    color: grey;
 }
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {

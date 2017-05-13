@@ -4,7 +4,8 @@ title: "How To Write Blogs In Markdown"
 author: Sushovan Majhi
 date: 2017-05-03 18:30 -0500 
 language: English
-categories: Tutorial Language
+categories: Tutorial
+tags: [Markdown, Language]
 album: false
 excerpt: Markdown is a type of Markup that is very easy to use. This markup language is widely used for writing blogs, webpages etc.
 comments: true
