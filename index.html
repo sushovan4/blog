@@ -7,11 +7,11 @@ title: Sushovan Majhi (Just Blogging)
     <ul>
       {% for post in site.posts %}
       <li>
-	{% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
 	<div class="row">
+	  {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
 	  <div class="col-xs-8">
-	    <span>Date: {{ post.date | date: date_format }}</span>
-	    <h5>{{ post.author }}</h5>
+	    {{ post.author }}<br>
+	    {{ post.date | date: date_format }}
 	  </div>
 	  
 	  <div class="col-xs-2">
@@ -26,8 +26,8 @@ title: Sushovan Majhi (Just Blogging)
 	  <h5 class="{{ post.language}}">{{ post.excerpt }}</h5>
 	  <a href="{{ post.url | relative_url }}">Read more...</a>
 	</div>
+	<hr>
       </li>
-      <hr>
       {% endfor %}
     </ul>
   </div>
