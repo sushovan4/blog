@@ -6,7 +6,7 @@ language: Bengali
 author: Sushovan Majhi
 categories: Introspection
 tags: [Bengali, Abol tabol]
-published: true
+published: false
 excerpt: Default
 ---
 মাঝে মাঝে চলার ছন্দটা খুব মন্থর হয়ে যায়। চলতে চলতে পা যেন আর চলে না। অনেক অনেক পুরোনো স্মৃতি, অভিজ্ঞতা, বিশ্বাস -- অনেকটা তআর অবাঞ্ছিত ও  প্রত্যাশিত। 
