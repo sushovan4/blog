@@ -34,9 +34,11 @@ p {
 }
 
 .ui.masthead.segment {
-    background: linear-gradient(135deg, rgba(24,42,115,1) 0%, rgba(33,138,174,1) 69%,
-    			       rgba(32,167,172,1) 89%)!important;
-    min-height: 70vh;
+    background-image: url('/assets/mast.png');
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
+    min-height: 50vh;
 }
 
 #teaching {
@@ -70,10 +72,6 @@ p {
 .brand {
     font-weight: bold!important;
     font-size: 18px;
-}
-.ui.secondary.pointing.menu {
-    border: none;
-    border-bottom: 1px solid white;
 }
 
 p {
