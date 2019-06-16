@@ -1,35 +1,16 @@
 ---
-layout: blog
-title: Sushovan Majhi (Just Blogging)
+layout: home
+title: HOME
+masthead: true
 ---
-<div class="container">
-  <div class="wrapper">
-  
-    <ul>
-      {% for post in site.posts %}
-      <li>
-	<div class="row">
-	  {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-	  <div class="col-xs-8">
-	    {{ post.date | date: date_format }} &#9834; {{ post.author }}<br>
-	    Category: {% include categories.html %}<br>
-	    Tags: {% include tags.html %}
-	    
-	  </div>
-	  
-	  <div class="col-xs-2">
-	    {% include share-button.html %}
-	  </div>
-	</div>
-	
-	<h4 class="{{ post.language}}">
-	  <a href="{{ post.url | relative_url }}">{{ post.title | escape }}
-	</a></h4>
-	<h5 class="{{ post.language}}">{{ post.excerpt }}</h5>
-	<a href="{{ post.url | relative_url }}">Read more...</a>
-	<hr>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-</div>
+{% include masthead.html %}
+{% include teaching.html %}
+{% include research.html %}
+{% include coding.html %}
+
+
+<script>
+$(document).ready(function( ){
+ $('.ui.menu .home.item').addClass('active');
+});
+</script>

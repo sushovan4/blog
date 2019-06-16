@@ -1,0 +1,48 @@
+---
+title: How to Write Mathematics in Jekyll
+categories: Mathematics
+published: false
+---
+    
+<section>Introduction</section>
+This is a test document.
+This is a test document.
+This is a test document.
+
+<subsection>First Intro</subsection>
+This is a test document.
+This is a test document.
+This is a test document. 
+<subsection>Introduction</subsection>
+This is a test document.
+This is a test document.
+<subsection>Introduction</subsection>
+This is a test document.
+
+  
+<theorem data-title="Pythagorean" data-number="1">
+  If $AB$, $BC$, and $CA$ denote the sides of a right-angled triangle, then
+  $$AB^2+BC^2=AC^2$$
+</theorem>
+
+The above theorem immediately implies the following corollary:
+<corollary data-title="Formula of Sum" data-number="1.2">
+  We can easily see that 
+  $$\sin^2{\theta}+\cos^2{\theta}=1$$
+</corollary>
+
+
+<section>Conclusion</section>
+This is a test document.
+This is a test document.
+This is a test document.
+
+<subsection>Introduction</subsection>
+This is a test document.
+This is a test document.
+This is a test document. 
+<subsection>Introduction</subsection>
+This is a test document.
+This is a test document.
+<subsection>Introduction</subsection>
+This is a test document.

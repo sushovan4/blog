@@ -1,0 +1,60 @@
+---
+layout: home
+permalink: blog
+title: Blog
+---
+<div class="ui basic segment container">
+  <div class="ui stackable grid">
+    
+    <div class="twelve wide column">
+    	{% assign groupedByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y' " %}
+	{% for year in groupedByYear %}
+	<div class="ui horizontal divider" style="font-size: 1.4em;color: grey">
+	  {{ year.name }}
+	</div>
+	{% assign groupedByMonth = year.items | group_by_exp: "post", "post.date | date:'%B' " %}
+	{% for month in groupedByMonth %}
+	<h4 class="ui center aligned disabled header">{{ month.name }}</h4>
+	{% for post in month.items %}
+	<div class="ui segments">
+	  <div class="ui segment">
+	    <div class="ui label">{{ post.categories }}</div>
+	    <a href="{{ post.url }}">
+	      <h1  class="ui header">  
+		<u>{{ post.title }}</u>
+	      </h1>
+	    </a>
+	    
+	    <i class="red circular user icon"></i><span class="disabled">{{ post.author }}</span>
+	    &nbsp;&nbsp;
+	    <i class="red circular calendar icon"></i><span class="disabled">
+	      {{ post.date | date: "%B %d, %Y"}}</span>  
+	  </div>
+	</div>
+   	{% endfor %}
+	{% endfor %}
+	{% endfor %}
+    </div>
+    
+    <div class="four wide column">
+      <h3 class="ui dividing header">Categories</h3>
+      {% for category in site.categories %}
+      <div class="ui label" href="{{ category.url }}">{{ category[0] }}</div>
+      {% endfor %}
+
+      <h3 class="ui dividing header">Tags</h3>
+      {% for tag in site.tags %}
+      <a class="styled" href="{{ category.url }}">#{{ tag[0] }}&nbsp;</a>
+      {% endfor %}
+
+    </div>
+
+  </div>
+</div>
+
+
+<script>
+$(document).ready(function( ){
+ $('.ui.menu .blog.item').addClass('active');
+});
+</script>

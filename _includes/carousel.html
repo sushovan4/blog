@@ -1,0 +1,9 @@
+<div class="slick"> 
+  {% for img in page.images %}
+  <div>
+    <img  style="max-height: 100%; max-width: 100%;"
+	  src="{{ img.path | prepend: "assets/" | relative_url}}" />
+    <div class="ui center aligned disabled header">{{ img.cap }}</div>
+  </div>
+  {% endfor %}
+</div>

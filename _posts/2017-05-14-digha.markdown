@@ -1,0 +1,67 @@
+---
+author: Nita Das
+date: 2017-05-14
+excerpt: It was 7th July 2017 when we made up our mind for a short trip to Digha, a beautiful sea beachin Midnapore, West Bengal, India. Sushovan, Rajat and I made...
+categories: Travel
+language: English
+tags: [English, Digha]
+comments: true
+album: true
+images:
+      - path: Digha/2.jpg
+        cap: Digha
+      - path: Digha/3.jpg
+        cap: Digha
+      - path: Digha/5.jpg
+        cap: Digha
+      - path: Digha/6.jpg
+        cap: Digha
+      - path: Digha/7.jpg
+        cap: Digha
+      - path: Digha/8.jpg
+        cap: Digha
+      - path: Digha/9.jpg
+        cap: Digha					  
+---
+{% include carousel.html %}
+
+It was 7th July 2016 when we made up our mind for a short trip to Digha, a beautiful sea beach
+in Midnapore, West Bengal, India. Sushovan, Rajat and I made our way to Digha by motorbike along Kona
+Expressway. The journey was really tiresome because of the excessive heat of the sun and
+occasional raining. It generally takes 3-4 hours to reach Digha from Baruipara but It took us
+nearly 6 hours because of the rain. We had our lunch in a roadside restaurant. The food was amazing
+specially the fish curry was out of this world. We enjoyed every bit of our meal. We stayed in a
+hotel there. We took a little rest then went out to explore the wonderful scenery of mohona which
+was nearly 2km away from New Digha. We reached there just after the sun set. The sky was still
+tinted. We could hear the roaring of the restless sea from a little distance. Finally, we were in
+Mohona. It was getting dark. We made our way to old Digha to enjoy the wrath of the waves. We sat
+there for about two hours watching the restless sea. It was an unforgettable moment especially
+when you are watching the waves keeping your head on your loved one's shoulder. The atmosphere
+automatically makes you feel romantic. We returned to our hotel after two hours and enjoyed our
+dinner with _Paneer Masala_ and _Tawa Roti_. Needless to mention that the food was awesome and cheap
+as well. First day of our Digha tour ends here. Next morning we got up early to experience the sun
+rise at Mohona but when we reached there around 5.30 the sun was already up there. Sadly, we
+missed the chance. But we made enough out of it. The morning was beautiful. The fishermen were out
+on the open sea with there little boats to catch fish, crabs etc. I must say that they are truly
+heroes. You need to be trully courageous to take your tiny boat to the fierce sea. It feels really
+bad when I think about the risk that they take every single day to earn their bread. Anyway we
+returned to our hotel because we wanted to go to the sea as early as possible. Yes, the sea was
+calling us. So immediately after our breakfast we went to the Digha sea beach. We could see a
+thick crowd everywhere. I wished it was a little less crowded. But it was the time of Eid. So the
+crowd was expected. We played in the water for some time then unfotunately we were compelled to
+come out of the water due to some unpleasant circumstances. I felt bad because nobody can really
+enjoy the waves during that short period. We came to our hotel and checked out. It was the
+last day of our trip. Again we took our motorbikes and the last part of our short trip began.
+We went to Talsari. Again the beautiful sea, sand, jhau tree and an unending beauty of nature.
+The sea beach is quite narrow here and also it was less crowded. You can get fresh crab, prawn,
+fish curry everything here. Also, beautiful statue and show pieces made of sea shells are really
+attractive. You can get simple pearl jewelry which are cheap and beautiful but you have to
+bargain a lot. We made our way to Tajpur beach hereafter. The sea is more fearful here. We spent a
+very little time there enjoying the coconut water and _Kulfi_ (type of ice cream) . We went to Mandarmoni from there.
+You can never get tired of watching the playful waves. We walked on the wet sand, felt the
+restless waves under our feet. We spent about one hour then again our journey began. It was rainy
+season. So we needed to be back soon. We waved goodbye to Digha promising we would be back again.
+I was already missing the sea, the sandy beach and everything. But we had to come back. We took
+our lunch in a roadside restaurant. Then again started moving. Then we halted in Kolaghat for a
+quick round of tea. You need to halt in every two hours when you are traveling by motorbike.
+We came back home around 7pm with a lot of beautiful memories.
