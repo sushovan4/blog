@@ -1,3 +1,4 @@
 ---
-title: Trip to Colorado
+title: কলোরাডো ভ্রমণ 
+categories: [Travel,ভ্রমণ]
 ---
