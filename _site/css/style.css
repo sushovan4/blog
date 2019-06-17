@@ -19,22 +19,23 @@
 .disabled {
     color:  grey;
 }
-.ui.post.segment {
-    max-width: 60em!important;
+
+.ui.post.header {
+    font-size: 4.5em;
 }
-.ui.post.segment p {
+
+.ui.post.segment {
+   max-width: 40em!important;
+}
+.ui.post.segment {
+    font-size: 1.5em;
+    color: rgb(57, 54, 54);
     line-height: 1.6em;
-    font-size: 1.3em;
-    text-align: justify;
 }
 
 body {
     font-family: Site, serif!important;
-    font-size: 18px;
-}
-
-p {
-    font-family: Site, serif!important;    
+    font-size: 16px;
 }
 
 .main.content {
@@ -63,11 +64,6 @@ p {
     display: none!important;
 }
 
-p {
-    font-family: 'Lato';
-    font-size: 18px;
-    color: grey;
-}
 
 a.styled {
     margin: 2px;
@@ -92,13 +88,6 @@ a.styled:hover::after {
     
 }
 
-p.post {
-    font-size: 32px;
-}
-
-.ui.post.header {
-    font-size: 4.5em;
-}
 @media only screen and (max-width: 700px) {
     .laptop {
 	display: none!important;
