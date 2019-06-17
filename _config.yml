@@ -12,25 +12,12 @@ theme: minima
 plugins:		
   - jekyll-feed
   - jekyll-sitemap	
+
 collections:
-  research-projects:
+  category:
     output: true
-  teaching:
-    output: false
-  coding-projects:
-    output: false
 
 defaults:
-  - scope:
-      path: ""
-      type: "teaching"
-    values:
-      layout: "project"
-  - scope:
-      path: ""
-      type: "research-projects"
-    values:
-      layout: "project"
   - scope:
       path: ""
       type: category
