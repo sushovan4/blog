@@ -1,8 +1,9 @@
 .post-card {
+    background-position: cener;
+    background-repeat: no-repeat;
+    min-height: 30vh;
     background-size: cover;
-    background-repeat: none;
     background-position: center;
-    height: 30vh;
     cursor: pointer;
 }
 
@@ -58,55 +59,14 @@ p {
     font-size: 4em;
 }
 
-#teaching {
-    min-height: 60vh;
-}
-#research {
-    min-height: 70vh;
-    background: linear-gradient(45deg, rgba(14,21,58,1) 0%,
-				rgba(115,107,147,1) 48%,
-    				rgba(243,201,215,1) 100%);    
-}
-#coding {
-    min-height: 70vh;
-}
-#academics {
-    min-height: 60vh;
-}
-
 .mobile {
     display: none!important;
-}
-
-.masthead .follow.icon {
-    -webkit-transition: -webkit-transform .6s ease-in-out;
-    transition:         transform .6s ease-in-out;
-}
-.masthead .follow.icon:hover {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-}
-.brand {
-    font-weight: bold!important;
-    font-size: 18px;
 }
 
 p {
     font-family: 'Lato';
     font-size: 18px;
     color: grey;
-}
-.bio {
-    display: inline-block;
-    max-width: 350px;
-    font-size: 18px;
-    color: white;
-}
-.bio .quote {
-    display: inline-block;
-    position: relative;
-    top: -8px;
-    color: #efcd83;
 }
 
 a.styled {
@@ -136,6 +96,9 @@ p.post {
     font-size: 32px;
 }
 
+.ui.post.header {
+    font-size: 4.5em;
+}
 @media only screen and (max-width: 700px) {
     .laptop {
 	display: none!important;

@@ -1,29 +1,24 @@
 ---
 layout: home
 ---
-
 <div class="ui basic container segment">
   <a href="/">
-    <i class="large chevron left icon"></i><u>All Posts</u>
+    <i class="big chevron left icon"></i><u>All Posts</u>
   </a>
 </div>
 
 <div class="ui container basic center aligned segment">
-  <h1 class="ui header">
+  <h1 class="ui post header">
     {{ page.title }}
   </h1>
-  <div class="ui three column grid">
-    <div class="column">
-      {% for cat in page.categories %}
-      <i class="red folder circular icon"></i>{{ cat }}
-      {% endfor %}
-    </div>
-    <div class="column">
-      <i class="red calendar circular icon"></i>{{ page.date | date: "%B %-d, %Y" }}
-    </div>
-    <div class="column">
-      <i class="red user circular icon"></i>{{ page.author }}
-    </div>
+  <div class="ui center aligne basic segment">
+    {% for cat in page.categories %}
+    <i class="folder circular icon"></i>{{ cat }}
+    {% endfor %}
+    &nbsp;&nbsp;
+    <i class="calendar circular icon"></i>{{ page.date | date: "%B %-d, %Y" }}
+    &nbsp;&nbsp;
+    <i class="user circular icon"></i>{{ page.author }}
   </div>
   {% for tag in page.tags %}
   <a class="styled">#{{ tag }}&nbsp;</a>
