@@ -39,6 +39,11 @@ p {
     background-position: center;
     background-size: cover;
     min-height: 50vh;
+
+ 
+}
+.ui.masthead.segment h1 {
+    font-size: 4em;
 }
 
 #teaching {

@@ -4,8 +4,18 @@
   <div class="ui container">
     <div class="ui basic center aligned segment">
       <h1 class="ui inverted header">
-	Welcome to my blog. 
+	WELCOME TO MY BLOG
       </h1>
+      <h2 class="ui inverted header">
+	<u>I write tutorials, travel diaries, and more.</u>
+      </h2>
+
+      <h3 class="ui inverted header">
+	Some of my most popular tags are
+      </h3>
+      {% for tag in site.tags %}
+      <div class="ui mini inverted button" style="margin:2px">{{ tag[0] }}</div>
+      {% endfor %}
     </div>
   </div>
 </div>
