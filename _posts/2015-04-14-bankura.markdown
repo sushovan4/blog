@@ -1,4 +1,5 @@
 ---
+avatar: bankura/2.jpg
 author: Nita Das
 comments: true
 title: বাঁকুড়া 

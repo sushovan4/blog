@@ -18,19 +18,21 @@ title: Blog
 	{% for month in groupedByMonth %}
 	<h4 class="ui center aligned disabled header">{{ month.name }}</h4>
 	{% for post in month.items %}
-	<div class="ui segments">
-	  <div class="ui segment">
-	    <div class="ui label">{{ post.categories }}</div>
-	    <a href="{{ post.url }}">
-	      <h1  class="ui header">  
+	<div class="ui basic segments">
+	  <div class="ui post-card segment" href="{{ post.url }}"
+	       onclick="window.location=$(this).attr('href')"
+	       data-background="{{ post.avatar }}">
+	    <div class="ui basic center aligned title segment">
+	      <h1 class="ui inverted header">  
 		<u>{{ post.title }}</u>
 	      </h1>
-	    </a>
-	    
-	    <i class="red circular user icon"></i><span class="disabled">{{ post.author }}</span>
-	    &nbsp;&nbsp;
-	    <i class="red circular calendar icon"></i><span class="disabled">
-	      {{ post.date | date: "%B %d, %Y"}}</span>  
+	      <i class="circular inverted green folder icon"></i>{{ post.categories }}
+	      &nbsp;&nbsp;
+ 	      <i class="circular inverted green user icon"></i>{{ post.author }}
+	      &nbsp;&nbsp;
+	      <i class="circular inverted green calendar icon"></i>
+		{{ post.date | date: "%B %d, %Y"}}  	      
+	    </div>
 	  </div>
 	</div>
    	{% endfor %}
@@ -38,7 +40,7 @@ title: Blog
 	{% endfor %}
     </div>
     
-    <div class="four wide column">
+    <div class="four wide center aligned column">
       <h3 class="ui dividing header">Categories</h3>
       {% for category in site.categories %}
       <div class="ui label" href="{{ category.url }}">{{ category[0] }}</div>
@@ -50,7 +52,6 @@ title: Blog
       {% endfor %}
 
     </div>
-
   </div>
 </div>
 

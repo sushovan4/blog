@@ -5,6 +5,11 @@ $('document').ready(function( ){
 	dots: true,
 	arrows: true
     });
+
+    $('.post-card').each(function( ){
+	$(this).css('background-image', 'url(/assets/'+ $(this).data('background') + ')');
+	
+    });
     
     // $(".menu .item")
     // 	.click(function() {

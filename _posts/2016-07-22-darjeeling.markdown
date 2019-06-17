@@ -1,4 +1,5 @@
 ---
+avatar: Darjeeling/6.jpg
 title: Darjeeling
 author: Nita Das
 language: English
