@@ -1,0 +1,3 @@
+---
+title: Trip to Colorado
+---
