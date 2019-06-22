@@ -20,20 +20,9 @@ collections:
 defaults:
   - scope:
       path: ""
-      type: category
+      type: topics
     values:
-      layout: "category"
-  - scope:
-      path: ""
-      type: tag
-    values:
-      layout: "tag"
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-      author: Sushovan Majhi
+      layout: topic
       
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

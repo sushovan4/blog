@@ -43,7 +43,9 @@ title: Blog
     <div class="four wide center aligned column">
       <h3 class="ui dividing header">Categories</h3>
       {% for topic in site.topics %}
-      <div class="ui label" href="{{ category.url }}">{{ topic.name }}</div>
+      <a class="ui mini inverted green button"
+	   style="margin:2px" href="{{ topic.url }}">{{ topic.name }}
+      </a>
       {% endfor %}
 
       <h3 class="ui dividing header">Tags</h3>
