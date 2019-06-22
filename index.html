@@ -19,7 +19,8 @@ title: Blog
 	<h4 class="ui center aligned disabled header">{{ month.name }}</h4>
 	{% for post in month.items %}
 	<div class="ui basic segments">
-	  <div class="ui post-card segment" href="{{ post.url }}"
+	  <div class="ui post-card {% unless post.avatar %}no-back{% endunless %} segment"
+	       href="{{ post.url }}"
 	       onclick="window.location=$(this).attr('href')"
 	       data-background="{{ post.avatar }}">
 	    <div class="ui basic center aligned title segment">

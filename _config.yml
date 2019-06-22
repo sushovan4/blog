@@ -23,6 +23,12 @@ defaults:
       type: topics
     values:
       layout: topic
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: Sushovan Majhi
       
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

@@ -15,6 +15,14 @@
     right:0;
     background-color:rgba(0,0,0,0.5)!important;
 }
+.post-card.no-back {
+    padding: 0;
+    min-height: 0;
+    
+}
+.post-card.no-back .title.segment{
+    position: relative;
+}
 
 .disabled {
     color:  grey;
