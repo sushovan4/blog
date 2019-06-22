@@ -14,7 +14,9 @@ plugins:
   - jekyll-sitemap	
 
 collections:
-
+  topics:
+    output: true
+    
 defaults:
   - scope:
       path: ""

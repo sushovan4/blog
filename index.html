@@ -26,7 +26,7 @@ title: Blog
 	      <h1 class="ui inverted header">  
 		<u>{{ post.title }}</u>
 	      </h1>
-	      <i class="circular inverted green folder icon"></i>{{ post.categories }}
+	      <i class="circular inverted green folder icon"></i>{{ post.topic }}
 	      &nbsp;&nbsp;
  	      <i class="circular inverted green user icon"></i>{{ post.author }}
 	      &nbsp;&nbsp;
@@ -42,8 +42,8 @@ title: Blog
     
     <div class="four wide center aligned column">
       <h3 class="ui dividing header">Categories</h3>
-      {% for category in site.categories %}
-      <div class="ui label" href="{{ category.url }}">{{ category[0] }}</div>
+      {% for topic in site.topics %}
+      <div class="ui label" href="{{ category.url }}">{{ topic.name }}</div>
       {% endfor %}
 
       <h3 class="ui dividing header">Tags</h3>

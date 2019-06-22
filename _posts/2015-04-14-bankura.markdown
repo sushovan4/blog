@@ -4,7 +4,7 @@ author: Nita Das
 comments: true
 title: বাঁকুড়া 
 date: 2017-05-01
-categories: Travel
+topic: Travel
 tags: [Bengali, Bankura, বাঁকুড়া, ভ্রমণ]
 language: Bengali
 excerpt: মানুষের মন ভারী অদ্ভূত। কিছুতেই কোনো এক স্থানে থাকতে পারে না। অজানা কিছুর তীব্র আকর্ষণে তাই চিরপরিচিত জগতটা ছেড়ে সে মাঝে মাঝেই বেরিয়ে পড়ে নতুন কিছুর টানে। ঠিক এই রকমই একটা কিছু হল আমার সাথে।...

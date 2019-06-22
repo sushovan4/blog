@@ -1,4 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-17T15:15:12-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Sushovan Majhi</title><subtitle>This is Sushovan Majhi's person homepage.</subtitle><entry><title type="html">কলোরাডো ভ্রমণ</title><link href="http://localhost:4000/travel/2019/06/17/colorado-trip.html" rel="alternate" type="text/html" title="কলোরাডো ভ্রমণ" /><published>2019-06-17T00:00:00-05:00</published><updated>2019-06-17T00:00:00-05:00</updated><id>http://localhost:4000/travel/2019/06/17/colorado-trip</id><content type="html" xml:base="http://localhost:4000/travel/2019/06/17/colorado-trip.html">&lt;p&gt;গ্রীষ্মের ছুটি&lt;/p&gt;</content><author><name>Sushovan Majhi</name></author><category term="ভ্রমণ" /><category term="কলোরাডো" /><summary type="html">গ্রীষ্মের ছুটি</summary></entry><entry><title type="html">Digha</title><link href="http://localhost:4000/travel/2017/05/14/digha.html" rel="alternate" type="text/html" title="Digha" /><published>2017-05-14T00:00:00-05:00</published><updated>2017-05-14T00:00:00-05:00</updated><id>http://localhost:4000/travel/2017/05/14/digha</id><content type="html" xml:base="http://localhost:4000/travel/2017/05/14/digha.html">&lt;div class=&quot;slick&quot;&gt; 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-22T10:22:12-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Sushovan Majhi</title><subtitle>This is Sushovan Majhi's person homepage.</subtitle><entry><title type="html">কলোরাডো ভ্রমণ</title><link href="http://localhost:4000/2019/06/17/colorado-trip.html" rel="alternate" type="text/html" title="কলোরাডো ভ্রমণ" /><published>2019-06-17T00:00:00-05:00</published><updated>2019-06-17T00:00:00-05:00</updated><id>http://localhost:4000/2019/06/17/colorado-trip</id><content type="html" xml:base="http://localhost:4000/2019/06/17/colorado-trip.html"></content><author><name>Sushovan Majhi</name></author><category term="ভ্রমণ" /><category term="কলোরাডো" /><summary type="html"></summary></entry><entry><title type="html">How to Write Mathematics in Jekyll</title><link href="http://localhost:4000/2019/06/15/write-tex.html" rel="alternate" type="text/html" title="How to Write Mathematics in Jekyll" /><published>2019-06-15T00:00:00-05:00</published><updated>2019-06-15T00:00:00-05:00</updated><id>http://localhost:4000/2019/06/15/write-tex</id><content type="html" xml:base="http://localhost:4000/2019/06/15/write-tex.html">&lt;section&gt;Introduction&lt;/section&gt;
+&lt;p&gt;This is a test document.
+This is a test document.
+This is a test document.&lt;/p&gt;
+
+&lt;subsection&gt;First Intro&lt;/subsection&gt;
+&lt;p&gt;This is a test document.
+This is a test document.
+This is a test document.&lt;/p&gt;
+&lt;subsection&gt;Introduction&lt;/subsection&gt;
+&lt;p&gt;This is a test document.
+This is a test document.&lt;/p&gt;
+&lt;subsection&gt;Introduction&lt;/subsection&gt;
+&lt;p&gt;This is a test document.&lt;/p&gt;
+
+&lt;theorem data-title=&quot;Pythagorean&quot; data-number=&quot;1&quot;&gt;
+  If $AB$, $BC$, and $CA$ denote the sides of a right-angled triangle, then
+  $$AB^2+BC^2=AC^2$$
+&lt;/theorem&gt;
+
+&lt;p&gt;The above theorem immediately implies the following corollary:&lt;/p&gt;
+&lt;corollary data-title=&quot;Formula of Sum&quot; data-number=&quot;1.2&quot;&gt;
+  We can easily see that 
+  $$\sin^2{\theta}+\cos^2{\theta}=1$$
+&lt;/corollary&gt;
+
+&lt;section&gt;Conclusion&lt;/section&gt;
+&lt;p&gt;This is a test document.
+This is a test document.
+This is a test document.&lt;/p&gt;
+
+&lt;subsection&gt;Introduction&lt;/subsection&gt;
+&lt;p&gt;This is a test document.
+This is a test document.
+This is a test document.&lt;/p&gt;
+&lt;subsection&gt;Introduction&lt;/subsection&gt;
+&lt;p&gt;This is a test document.
+This is a test document.&lt;/p&gt;
+&lt;subsection&gt;Introduction&lt;/subsection&gt;
+&lt;p&gt;This is a test document.&lt;/p&gt;</content><author><name>Sushovan Majhi</name></author><summary type="html">Introduction This is a test document. This is a test document. This is a test document.</summary></entry><entry><title type="html">Digha</title><link href="http://localhost:4000/2017/05/14/digha.html" rel="alternate" type="text/html" title="Digha" /><published>2017-05-14T00:00:00-05:00</published><updated>2017-05-14T00:00:00-05:00</updated><id>http://localhost:4000/2017/05/14/digha</id><content type="html" xml:base="http://localhost:4000/2017/05/14/digha.html">&lt;div class=&quot;slick&quot;&gt; 
   
   &lt;div&gt;
     &lt;img style=&quot;max-height: 100%; max-width: 100%;&quot; src=&quot;/assets/Digha/2.jpg&quot; /&gt;
@@ -90,7 +129,7 @@ again.  I was already missing the sea, the sandy beach and everything. But we
 had to come back. We took our lunch in a roadside restaurant. Then again started
 moving. Then we halted in Kolaghat for a quick round of tea. You need to halt in
 every two hours when you are traveling by motorbike.  We came back home around
-7pm with a lot of beautiful memories.&lt;/p&gt;</content><author><name>Nita Das</name></author><category term="English" /><category term="Digha" /><summary type="html">Digha Digha Digha Digha Digha Digha Digha</summary></entry><entry><title type="html">বাঁকুড়া</title><link href="http://localhost:4000/travel/2017/05/01/bankura.html" rel="alternate" type="text/html" title="বাঁকুড়া" /><published>2017-05-01T00:00:00-05:00</published><updated>2017-05-01T00:00:00-05:00</updated><id>http://localhost:4000/travel/2017/05/01/bankura</id><content type="html" xml:base="http://localhost:4000/travel/2017/05/01/bankura.html">&lt;div class=&quot;slick&quot;&gt; 
+7pm with a lot of beautiful memories.&lt;/p&gt;</content><author><name>Nita Das</name></author><category term="Digha" /><summary type="html">Digha Digha Digha Digha Digha Digha Digha</summary></entry><entry><title type="html">বাঁকুড়া</title><link href="http://localhost:4000/2017/05/01/bankura.html" rel="alternate" type="text/html" title="বাঁকুড়া" /><published>2017-05-01T00:00:00-05:00</published><updated>2017-05-01T00:00:00-05:00</updated><id>http://localhost:4000/2017/05/01/bankura</id><content type="html" xml:base="http://localhost:4000/2017/05/01/bankura.html">&lt;div class=&quot;slick&quot;&gt; 
   
   &lt;div&gt;
     &lt;img style=&quot;max-height: 100%; max-width: 100%;&quot; src=&quot;/assets/bankura/1.jpg&quot; /&gt;
@@ -139,7 +178,7 @@ every two hours when you are traveling by motorbike.  We came back home around
 গলা ছেড়ে গান গাইলাম দুজনে। তাড়িয়ে তাড়িয়ে উপভোগ করলাম প্রতিটা মুহূর্ত। তারপর আবার শুরু হলো হোটেল ফেরার পালা। পরদিনই যেহেতু খ্রীষ্টমাস তাই বাঁকুড়া শহর সেজে উঠেছিল অপরুপ রূপে।
 শহরে একটি চার্চ এ গেলাম। কিছুটা সময় চার্চ এ কাটিয়ে সামনের একটি ফুচকার ষ্টলে ফুচকা আর তারপর হোটেল। ঠান্ডা বাড়তে লাগলো। রাত তখন ৮টা। আবার হেঁটে বেরিয়ে পড়লাম একটু আশপাশটা ঘুরে দেখার জন্য। স্থানীয়
 একটি দোকানে কফিতে চুমুক দিয়ে অপরিচিতদের ভিড়ে ভবঘুরের মত ঘুরতে লাগলাম। কেউ আমাদের চেনেনা, গায়ে কাদা ছড়ার মত কেউ নেই, শুধু ভালবাসার মানুষটা আর আমি। মনে হচ্ছে দিনটা যেন শেষ না হয়। একটি মন্দিরে আরতি হচ্ছিল।
-কিছুক্ষণ থামলাম সেখানে। জীবনে একসাথে এত বৈচিত্র্য আগে কখনো আসেনি। ৯টা নাগাদ ফিরলাম হোটেলে ক্লান্ত হয়ে শুয়ে পরলাম। ও টিভি চালিয়ে বসলো। আমি আর রাতে কিছু খেলাম না। শুধু একটা কোক। ও ডিনার সারলো।&lt;/p&gt;</content><author><name>Nita Das</name></author><category term="Bengali" /><category term="Bankura" /><category term="বাঁকুড়া" /><category term="ভ্রমণ" /><summary type="html">মানুষের মন ভারী অদ্ভূত। কিছুতেই কোনো এক স্থানে থাকতে পারে না। অজানা কিছুর তীব্র আকর্ষণে তাই চিরপরিচিত জগতটা ছেড়ে সে মাঝে মাঝেই বেরিয়ে পড়ে নতুন কিছুর টানে। ঠিক এই রকমই একটা কিছু হল আমার সাথে।...</summary></entry><entry><title type="html">Darjeeling</title><link href="http://localhost:4000/travel/2016/07/22/darjeeling.html" rel="alternate" type="text/html" title="Darjeeling" /><published>2016-07-22T00:00:00-05:00</published><updated>2016-07-22T00:00:00-05:00</updated><id>http://localhost:4000/travel/2016/07/22/darjeeling</id><content type="html" xml:base="http://localhost:4000/travel/2016/07/22/darjeeling.html">&lt;div class=&quot;slick&quot;&gt; 
+কিছুক্ষণ থামলাম সেখানে। জীবনে একসাথে এত বৈচিত্র্য আগে কখনো আসেনি। ৯টা নাগাদ ফিরলাম হোটেলে ক্লান্ত হয়ে শুয়ে পরলাম। ও টিভি চালিয়ে বসলো। আমি আর রাতে কিছু খেলাম না। শুধু একটা কোক। ও ডিনার সারলো।&lt;/p&gt;</content><author><name>Nita Das</name></author><category term="Bengali" /><category term="Bankura" /><category term="বাঁকুড়া" /><category term="ভ্রমণ" /><summary type="html">মানুষের মন ভারী অদ্ভূত। কিছুতেই কোনো এক স্থানে থাকতে পারে না। অজানা কিছুর তীব্র আকর্ষণে তাই চিরপরিচিত জগতটা ছেড়ে সে মাঝে মাঝেই বেরিয়ে পড়ে নতুন কিছুর টানে। ঠিক এই রকমই একটা কিছু হল আমার সাথে।...</summary></entry><entry><title type="html">Darjeeling</title><link href="http://localhost:4000/2016/07/22/darjeeling.html" rel="alternate" type="text/html" title="Darjeeling" /><published>2016-07-22T00:00:00-05:00</published><updated>2016-07-22T00:00:00-05:00</updated><id>http://localhost:4000/2016/07/22/darjeeling</id><content type="html" xml:base="http://localhost:4000/2016/07/22/darjeeling.html">&lt;div class=&quot;slick&quot;&gt; 
   
   &lt;div&gt;
     &lt;img style=&quot;max-height: 100%; max-width: 100%;&quot; src=&quot;/assets/Darjeeling/1.jpg&quot; /&gt;

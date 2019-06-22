@@ -2,9 +2,8 @@
 avatar: Digha/9.jpg
 author: Nita Das
 date: 2017-05-14
-categories: Travel
-language: English
-tags: [English, Digha]
+topic: Travel
+tags: [Digha]
 comments: true
 album: true
 images:

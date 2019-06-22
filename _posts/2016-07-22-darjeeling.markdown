@@ -4,7 +4,7 @@ title: Darjeeling
 author: Nita Das
 language: English
 excerpt: In the summer of 2016 we made a trip to Darjeeling, one of the most famous hill stations in the eastern India. It was not decided before
-categories: Travel
+topic: Travel
 tags: [English, Darjeeling, দার্জিলিং]
 comments: true
 album: true
