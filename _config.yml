@@ -7,7 +7,12 @@ url: "https://www.smajhi.com"
 github_username: sushovan4
 
 # Build settings  
-markdown: kramdown	
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  
 theme: minima		
 plugins:		
   - jekyll-feed

@@ -1,0 +1,280 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-139539239-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-139539239-2');
+</script>
+
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building a Rails App from Scratch | Sushovan Majhi</title>
+    <link rel="stylesheet"
+	  href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/math.css">
+    <link rel="stylesheet" type="text/css" href="/css/monokai.css">
+    <link rel="stylesheet" type="text/css"
+	  href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+	    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+	    crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" async
+	    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+    <link rel="stylesheet" type="text/css" href="/css/slick/slick-theme.css"/>
+  </head>
+  <body>
+    
+    <div class="ui inverted basic segment" style="margin: 0">
+      <div class="ui secondary pointing menu">
+  <div class="ui container">
+    <a  href="/" class=" home item"><i class="ui large inverted home icon"></i></a>
+    
+    <div class="right menu">
+      <div class="ui dropdown item">
+	<i class="inverted bars icon"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+    
+
+    <div class="main content"><div class="ui basic container segment">
+  <a href="/">
+    <i class="big chevron left icon"></i><u>All Posts</u>
+  </a>
+</div>
+
+<div class="ui container basic center aligned segment">
+  <h1 class="ui post header">
+    Building a Rails App from Scratch
+  </h1>
+  <div class="ui center aligne basic segment">
+    
+    &nbsp;&nbsp;
+    <i class="calendar circular icon"></i>June 23, 2019
+    &nbsp;&nbsp;
+    <i class="user circular icon"></i>Sushovan Majhi
+  </div>
+  
+  <br><br>
+  <div class="ui facebook icon button"><i class="ui facebook f icon"></i></div>
+  <div class="ui red icon button"><i class="ui google icon"></i></div>
+</div>
+
+<div class="ui container basic post segment">
+  <ol style="border:1px solid grey">
+  <h2 class="ui header">Table of Content</h2>
+  <li><a href="#intro">Introduction</a></li>
+  <li><a href="#prep">Preparation</a></li>
+  <li><a href="#prep">Creating a new rails app</a></li>
+  <li><a href="#prep">Hosting with AWS</a></li>
+  <li><a href="#prep">Adding Styles</a></li>
+  <li><a href="#prep">Design the Database</a></li>
+  <li><a href="#prep">Conclusion</a></li>
+</ol>
+
+<div id="intro">
+  <h1 class="ui header">Introduction</h1>
+</div>
+
+<div id="prep">
+  <h1 class="ui header">Preparation</h1>
+  In order to install Ruby on Rails, we first check our version of Ruby by typing
+  the following in the terminal:
+
+  
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">  <span class="nv">$ </span>ruby <span class="nt">-v</span>
+  </code></pre></figure>
+
+
+  
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">  <span class="nv">$ </span>rails <span class="nt">-v</span>
+  </code></pre></figure>
+
+
+</div>
+
+<div>
+  <h1 class="ui header">Creating a new Rails App</h1>
+  Now, let's create a new app called "avimukh".
+  
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="nv">$ </span>rails new avimukh <span class="nt">--database</span><span class="o">=</span>postgresql
+  </code></pre></figure>
+
+  By default, rails generates an app that uses SQL database. We are going to
+  create the new app that uses Postgresl instead. 
+
+  It takes about a minutes to generate a folder named avimukh in the directory
+  where the command was triggered. In the process, rails installs the dependencies.
+  It may ask for the superuser password.
+
+  The Gemfile looks like this.
+  <pre><code>
+  
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">  <span class="n">source</span> <span class="s1">'https://rubygems.org'</span>
+  <span class="n">git_source</span><span class="p">(</span><span class="ss">:github</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">repo</span><span class="o">|</span> <span class="s2">"https://github.com/</span><span class="si">#{</span><span class="n">repo</span><span class="si">}</span><span class="s2">.git"</span> <span class="p">}</span>
+
+  <span class="n">ruby</span> <span class="s1">'2.5.1'</span>
+
+  <span class="n">gem</span> <span class="s1">'rails'</span><span class="p">,</span> <span class="s1">'~&gt; 5.2.3'</span>
+  <span class="n">gem</span> <span class="s1">'pg'</span><span class="p">,</span> <span class="s1">'&gt;= 0.18'</span><span class="p">,</span> <span class="s1">'&lt; 2.0'</span>
+  <span class="n">gem</span> <span class="s1">'puma'</span><span class="p">,</span> <span class="s1">'~&gt; 3.11'</span>
+  <span class="n">gem</span> <span class="s1">'sass-rails'</span><span class="p">,</span> <span class="s1">'~&gt; 5.0'</span>
+  <span class="n">gem</span> <span class="s1">'uglifier'</span><span class="p">,</span> <span class="s1">'&gt;= 1.3.0'</span>
+  <span class="n">gem</span> <span class="s1">'coffee-rails'</span><span class="p">,</span> <span class="s1">'~&gt; 4.2'</span>
+  <span class="n">gem</span> <span class="s1">'turbolinks'</span><span class="p">,</span> <span class="s1">'~&gt; 5'</span>
+  <span class="n">gem</span> <span class="s1">'jbuilder'</span><span class="p">,</span> <span class="s1">'~&gt; 2.5'</span>
+  <span class="n">gem</span> <span class="s1">'bootsnap'</span><span class="p">,</span> <span class="s1">'&gt;= 1.1.0'</span><span class="p">,</span> <span class="ss">require: </span><span class="kp">false</span>
+
+  <span class="n">group</span> <span class="ss">:development</span><span class="p">,</span> <span class="ss">:test</span> <span class="k">do</span>
+    <span class="n">gem</span> <span class="s1">'byebug'</span><span class="p">,</span> <span class="ss">platforms: </span><span class="p">[</span><span class="ss">:mri</span><span class="p">,</span> <span class="ss">:mingw</span><span class="p">,</span> <span class="ss">:x64_mingw</span><span class="p">]</span>
+  <span class="k">end</span>
+
+  <span class="n">group</span> <span class="ss">:development</span> <span class="k">do</span>
+    <span class="n">gem</span> <span class="s1">'web-console'</span><span class="p">,</span> <span class="s1">'&gt;= 3.3.0'</span>
+    <span class="n">gem</span> <span class="s1">'listen'</span><span class="p">,</span> <span class="s1">'&gt;= 3.0.5'</span><span class="p">,</span> <span class="s1">'&lt; 3.2'</span>
+    <span class="n">gem</span> <span class="s1">'spring'</span>
+    <span class="n">gem</span> <span class="s1">'spring-watcher-listen'</span><span class="p">,</span> <span class="s1">'~&gt; 2.0.0'</span>
+  <span class="k">end</span>
+
+  <span class="n">group</span> <span class="ss">:test</span> <span class="k">do</span>
+    <span class="n">gem</span> <span class="s1">'capybara'</span><span class="p">,</span> <span class="s1">'&gt;= 2.15'</span>
+    <span class="n">gem</span> <span class="s1">'selenium-webdriver'</span>
+    <span class="n">gem</span> <span class="s1">'chromedriver-helper'</span>
+  <span class="k">end</span>
+
+  <span class="n">gem</span> <span class="s1">'tzinfo-data'</span><span class="p">,</span> <span class="ss">platforms: </span><span class="p">[</span><span class="ss">:mingw</span><span class="p">,</span> <span class="ss">:mswin</span><span class="p">,</span> <span class="ss">:x64_mingw</span><span class="p">,</span> <span class="ss">:jruby</span><span class="p">]</span>
+  </code></pre></figure>
+
+  </code></pre>	
+
+  We add a secret key to the file <span class="code">config/secrets.yml</span>.
+  
+<figure class="highlight"><pre><code class="language-yml" data-lang="yml">  <span class="na">secret_key_base</span><span class="pi">:</span> <span class="s">ENV['SECRET_KEY_BASE']</span>
+  </code></pre></figure>
+
+
+  Let's install postgresql.
+  
+<figure class="highlight"><pre><code class="language-comamnd" data-lang="comamnd">  $ sudo apt update
+  $ sudo apt install postgresql postgresql-contrib
+  </code></pre></figure>
+
+
+  Installing postgresql adds a new user named postgres. Let's login to the user.
+  
+<figure class="highlight"><pre><code class="language-comamnd" data-lang="comamnd">  $ sudo -i -u postgres
+  </code></pre></figure>
+
+
+  Enter psql add the superuser.
+  
+<figure class="highlight"><pre><code class="language-comamnd" data-lang="comamnd">  $ psql
+  </code></pre></figure>
+
+
+  
+<figure class="highlight"><pre><code class="language-comamnd" data-lang="comamnd">  postgres@wenk-lab:~$ createuser --interactive
+  </code></pre></figure>
+
+
+
+  
+<figure class="highlight"><pre><code class="language-comamnd" data-lang="comamnd">  postgres=# create role avimukh with login createdb password 'password1';
+  CREATE ROLE
+  </code></pre></figure>
+
+  
+  
+<figure class="highlight"><pre><code class="language-comamnd" data-lang="comamnd">  postgres=# \q
+  postgres@wenk-lab:~$
+  </code></pre></figure>
+
+
+  Let's add the login information to <span class="code">config/database.yml</span>
+  
+<figure class="highlight"><pre><code class="language-yml" data-lang="yml">  <span class="na">default</span><span class="pi">:</span> <span class="nl">&amp;default</span>
+    <span class="na">adapter</span><span class="pi">:</span> <span class="s">postgresql</span>
+    <span class="na">encoding</span><span class="pi">:</span> <span class="s">unicode</span>
+    <span class="c1"># For details on connection pooling, see Rails configuration guide</span>
+    <span class="c1"># http://guides.rubyonrails.org/configuring.html#database-pooling</span>
+    <span class="na">pool</span><span class="pi">:</span> <span class="s">&lt;%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %&gt;</span>
+
+  <span class="na">development</span><span class="pi">:</span>
+    <span class="s">&lt;&lt;</span><span class="pi">:</span> <span class="nv">*default</span>
+    <span class="na">database</span><span class="pi">:</span> <span class="s">avimukh_development</span>
+    <span class="na">username</span><span class="pi">:</span> <span class="s">avimukh</span>
+    <span class="na">password</span><span class="pi">:</span> <span class="s">password1</span>
+  
+  <span class="na">test</span><span class="pi">:</span>
+    <span class="s">&lt;&lt;</span><span class="pi">:</span> <span class="nv">*default</span>
+    <span class="na">database</span><span class="pi">:</span> <span class="s">avimukh_test</span>
+    <span class="na">username</span><span class="pi">:</span> <span class="s">avimukh</span>
+    <span class="na">password</span><span class="pi">:</span> <span class="s">password1</span>
+
+  <span class="c1"># On Heroku and other platform providers, you may have a full connection URL</span>
+  <span class="c1"># available as an environment variable. For example:</span>
+  <span class="c1">#</span>
+  <span class="c1">#   DATABASE_URL="postgres://myuser:mypass@localhost/somedatabase"</span>
+  <span class="c1">#</span>
+  <span class="c1"># You can use this database configuration with:</span>
+  <span class="c1">#</span>
+  <span class="c1">#   production:</span>
+  <span class="c1">#     url: &lt;%= ENV['DATABASE_URL'] %&gt;</span>
+  <span class="c1">#</span>
+  <span class="na">production</span><span class="pi">:</span>
+    <span class="s">&lt;&lt;</span><span class="pi">:</span> <span class="nv">*default</span>
+    <span class="na">database</span><span class="pi">:</span> <span class="s">avimukh_production</span>
+    <span class="na">username</span><span class="pi">:</span> <span class="s">avimukh</span>
+    <span class="na">password</span><span class="pi">:</span> <span class="s">&lt;%= ENV['AVIMUKH_DATABASE_PASSWORD'] %&gt;</span>
+  </code></pre></figure>
+
+
+  Let's 
+  
+<figure class="highlight"><pre><code class="language-yml" data-lang="yml">  <span class="s">$ rails db:setup</span>
+  </code></pre></figure>
+
+</div>
+
+</div>
+
+<script>
+  $(document).ready(function( ){
+  $('.ui.menu .blog.item').addClass('active');
+  });
+</script>
+</div>
+    <div class="ui basic inverted segment" style="margin:0">
+  <div class="ui container">
+    <i class="copyright icon"></i> 2019 Sushovan Majhi
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <script type="text/javascript"
+	    src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="/js/homepage.js"></script>
+    <script src="/js/math.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+      });
+    </script>
+  </body>
+</html>
+
