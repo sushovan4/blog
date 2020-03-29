@@ -7,62 +7,41 @@ title: Blog
 
 {% include masthead.html %}
 
-<div class="ui basic segment container">
-  <div class="ui stackable grid">
-    
-    <div class="twelve wide column">
-    	{% assign groupedByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y' " %}
-	{% for year in groupedByYear %}
-	<div class="ui horizontal divider" style="font-size: 1.4em;color: grey">
-	  {{ year.name }}
-	</div>
-	{% assign groupedByMonth = year.items | group_by_exp: "post", "post.date | date:'%B' " %}
-	{% for month in groupedByMonth %}
-	<h4 class="ui center aligned disabled header">{{ month.name }}</h4>
-	{% for post in month.items %}
-	<div class="ui basic segments">
-	  <div class="ui post-card {% unless post.avatar %}no-back{% endunless %} segment"
-	       href="{{ post.url }}"
-	       onclick="window.location=$(this).attr('href')"
-	       data-background="{{ post.avatar }}">
-	    <div class="ui basic center aligned title segment">
-	      <h1 class="ui inverted header">  
-		<u>{{ post.title }}</u>
-	      </h1>
-	      <i class="circular inverted green folder icon"></i>{{ post.topic }}
-	      &nbsp;&nbsp;
- 	      <i class="circular inverted green user icon"></i>{{ post.author }}
-	      &nbsp;&nbsp;
-	      <i class="circular inverted green calendar icon"></i>
-		{{ post.date | date: "%B %d, %Y"}}  	      
-	    </div>
-	  </div>
-	</div>
-   	{% endfor %}
-	{% endfor %}
-	{% endfor %}
-    </div>
-    
-    <div class="four wide center aligned column">
-      <h3 class="ui dividing header">Categories</h3>
-      {% for topic in site.topics %}
-      <a class="ui mini inverted green button"
-	   style="margin:2px" href="{{ topic.url }}">{{ topic.name }}
-      </a>
-      {% endfor %}
+<br><br>
+<div class="container">
+  {% for post in site.posts %}
+  <div class="card">
+    <a href="{{ post.url }}">
+      <div class="title">  
+	<u><span style="color: #C70039;">&sect;</span>{{ post.title }}</u>
+      </div>
+    </a>
 
-      <h3 class="ui dividing header">Tags</h3>
-      {% for tag in site.tags %}
-      <a class="styled" href="{{ category.url }}">#{{ tag[0] }}&nbsp;</a>
-      {% endfor %}
-
-    </div>
+    {% for tag in post.tags %}
+    <a class="tag">#{{ tag }}</a>
+    {% endfor %}
+    <br>
+    <i class="circular inverted green folder icon"></i>Topic: {{ post.topic }}
+    &nbsp;&nbsp;
+    <i class="circular inverted green calendar icon"></i>
+    {{ post.date | date: "%B %d, %Y"}}  	      
   </div>
+  <br><br>
+  <div style="border-bottom: 2px solid lightgrey"></div>
+  {% endfor %}
+  
 </div>
 
+<h3 class="ui dividing header">Categories</h3>
+{% for topic in site.topics %}
+<a class="ui mini inverted green button"
+   style="margin:2px" href="{{ topic.url }}">{{ topic.name }}
+</a>
+{% endfor %}
 
-<script>
-$(document).ready(function( ){
- $('.ui.menu .blog.item').addClass('active');
-});
-</script>
+<h3 class="ui dividing header">Tags</h3>
+{% for tag in site.tags %}
+<a class="styled" href="{{ category.url }}">#{{ tag[0] }}&nbsp;</a>
+{% endfor %}
+
+</div>

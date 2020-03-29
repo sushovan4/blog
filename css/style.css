@@ -6,21 +6,23 @@ html, body {
 }
 
 .masthead {
-    color: white;
+    color: black;
     border-radius: 3px;
-    background-color: #EE9BB3;
-    background-image: url('/assets/mast1.png');
-    background-repeat: none;
-    background-position: center;
-    background-size: cover;
+    /* background-color: #EE9BB3; */
+    /* background-image: url('/assets/mast.png'); */
+    /* background-repeat: none; */
+    /* background-position: center; */
+    /* background-size: cover; */
     min-height: 30vh; 
     padding: 0 120px;
     padding-top: 80px;
 }
 
 .tag {
+    text-decoration: underline;
+    font-size: 1.3em;
     display: inline-block;
-    color: #C70039;;
+    color: #C70039;
     margin-left: 5px!important;
 }
 
@@ -52,30 +54,19 @@ html, body {
     text-align: center;
 }
 
-.post-card {
-    background-position: cener;
-    background-repeat: no-repeat;
-    min-height: 30vh;
-    background-size: cover;
-    background-position: center;
-    cursor: pointer;
+.card {
+    padding: 5px;
 }
 
-.post-card .title.segment {
-    color:white;
-    position:absolute;
-    bottom:0;
-    left:0;
-    right:0;
-    background-color:rgba(0,0,0,0.5)!important;
+.card .title {
+    margin-top: 1em;
+    font-size: 2.5em;
+    color: black;
+    text-transform: uppercase;
 }
-.post-card.no-back {
-    padding: 0;
-    min-height: 0;
-    
-}
-.post-card.no-back .title.segment{
-    position: relative;
+
+.card .title:hover {
+    color: #C70039;
 }
 
 .disabled {
