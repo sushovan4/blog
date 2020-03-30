@@ -13,6 +13,7 @@ a {
 }
 
 .button {
+    display: inline-block;
     color: black;
     background: white;
     border-radius: 5px;
@@ -67,6 +68,7 @@ a {
 }
 
 .tag {
+    font-family: monospace;
     font-size: 1em;
     display: inline-block;
     color: #C70039;
@@ -124,29 +126,53 @@ a {
     color:  grey;
 }
 
-.ui.post.header {
-    font-size: 4.5em;
+.post.title {
+    font-size: 3.5em;
 }
 
-.ui.post.segment {
-    max-width: 40em!important;
-}
-.ui.post.segment {
+.post.content {
+    text-align: justify;
+    max-width: 35em!important;
+    margin: auto;
     font-size: 1.5em;
     color: rgb(57, 54, 54);
     line-height: 1.6em;
 }
 
+.post.content h1 {
+    font-size: 1.5em;
+}
 
+.post.content h1:before {
+    content: '# ';
+    color: grey;
+    cursor: pointer;
+}
 
-.mobile {
-    display: none!important;
+.post.content h1:hover:before {
+    color: #C70039;
+}
+
+.post.content h2 {
+    font-size: 1em;
+}
+
+.post.content h2:before {
+    content: '## ';
+    color: grey;
+    cursor: pointer;
+}
+
+.post.content h2:hover:before {
+    color: #C70039;
 }
 
 .highlight {
+    margin: 2px;
+    padding-left: 5px;
     overflow: auto;
     border-radius: 3px;
-    font-size: .6em;   
+    font-size: .6em;
     line-height: 1.4em;
     line-spacing: 0;
 }
@@ -159,6 +185,8 @@ a {
     color: darkgrey;
     font-size: 0.7em;
 }
+
+
 @media only screen and (max-width: 700px) {
     .laptop {
 	display: none!important;
@@ -168,6 +196,10 @@ a {
     }
 }
 
+
+.mobile {
+    display: none!important;
+}
 
 .container {
     max-width: 100%;

@@ -1,4 +1,12 @@
 ---
-title: "GIT: Collaborative Research for Mathematicians"
+title: "Collaborative Research using <tt>GIT</tt>"
+topic: "Software"
+tags: [GIT,LaTeX]
 ---
-bla
+
+<span style="font-size:2em">T</span>here was
+# Introduction
+
+# Installation
+
+## Git vs Dropbox

@@ -1,39 +1,27 @@
 ---
 layout: home
 ---
-<div class="ui basic container segment">
-  <a href="/">
-    <i class="big chevron left icon"></i><u>All Posts</u>
-  </a>
-</div>
-
-<div class="ui container basic center aligned segment">
-  <h1 class="ui post header">
+<div class="container">
+  <h1 class="center aligned post title">
     {{ page.title }}
   </h1>
-  <div class="ui center aligne basic segment">
-    {% for cat in page.categories %}
-    <i class="folder circular icon"></i>{{ cat }}
+  <div style="width: 300px;margin:auto;border-bottom: 10px solid #C70039;"></div>
+  <h3 class="center aligned">{{ page.author }}
+    &lt;<a style="color:#C70039" href="https://smajhi.com"><tt>smajhi.com</tt></a>&gt;
+  </h3>
+  <div class="center aligned">
+    <span class="disabled">{{ page.date | date: "%B %-d, %Y" }}</span>
+    {% if page.topic %}
+    |
+    <a href="/" class="button">{{ page.topic }}</a>
+    {% endif %}
+    <br>
+    <br>
+    {% for tag in page.tags %}
+    <a class="tag">#{{ tag }}&nbsp;</a>
     {% endfor %}
-    &nbsp;&nbsp;
-    <i class="calendar circular icon"></i>{{ page.date | date: "%B %-d, %Y" }}
-    &nbsp;&nbsp;
-    <i class="user circular icon"></i>{{ page.author }}
   </div>
-  {% for tag in page.tags %}
-  <a class="styled">#{{ tag }}&nbsp;</a>
-  {% endfor %}
-  <br><br>
-  <div class="ui facebook icon button"><i class="ui facebook f icon"></i></div>
-  <div class="ui red icon button"><i class="ui google icon"></i></div>
+  <div class="post content">
+    {{ content }}
+  </div>
 </div>
-
-<div class="ui container basic post segment">
-  {{ content }}
-</div>
-
-<script>
-  $(document).ready(function( ){
-  $('.ui.menu .blog.item').addClass('active');
-  });
-</script>

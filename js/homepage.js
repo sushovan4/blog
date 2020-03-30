@@ -1,14 +1,12 @@
 $('document').ready(function( ){
-    $('.ui.dropdown').dropdown( );
 
-    $('.slick').slick({
-	dots: true,
-	arrows: true
-    });
+    // $('.slick').slick({
+    // 	dots: true,
+    // 	arrows: true
+    // });
 
-    $('.post-card').each(function( ){
-	$(this).css('background-image', 'url(/assets/'+ $(this).data('background') + ')');
-	
+    $('.post.content h1').each(function( ) {
+	$(this).attr('href', URLify( $(this).text( ) ) );
     });
     
     // $(".menu .item")
@@ -18,3 +16,7 @@ $('document').ready(function( ){
     // 	    }, 1000);
     // 	});
 });
+
+function URLify(string) {
+  return string.trim().replace(/\s/g, '%20');
+}
