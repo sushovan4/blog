@@ -2,6 +2,7 @@
 title: "Collaborative Research using <tt>GIT</tt>"
 topic: "Software"
 tags: [GIT,LaTeX]
+comments: true
 ---
 
 <span style="font-size:2em">T</span>here was

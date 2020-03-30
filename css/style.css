@@ -56,6 +56,7 @@ a {
     min-height: 30vh; 
     padding: 0 120px;
     padding-top: 80px;
+    padding-bottom: 40px;
     box-shadow: 10px 10px 30px 5px lightgray;  
 }
 
