@@ -11,6 +11,21 @@ body {
 a {
     text-decoration: none;
 }
+
+.button {
+    color: black;
+    background: white;
+    border-radius: 5px;
+    border: 2px solid #C70039;
+    padding: 3px;
+    transition: background 0.4s;
+}
+
+.button:hover {
+    background: #C70039;
+    color: white;
+}
+
 #footer {
     background: black;
     color: white;
@@ -52,7 +67,6 @@ a {
 }
 
 .tag {
-    text-decoration: underline;
     font-size: 1em;
     display: inline-block;
     color: #C70039;

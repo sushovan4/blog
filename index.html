@@ -19,17 +19,17 @@ title: Blog
 	    <u><span style="color: #C70039;">&sect;</span>{{ post.title }}</u>
 	  </div>
 	</a>
-	
+	<span style="color:gray">{{ post.date | date: "%B %d, %Y"}}</span>
+
+	{% if post.topic %}
+	&nbsp;&nbsp;&verbar;&nbsp;&nbsp;
+	<a class="button">{{ post.topic }}</a>
+	{% endif %}
+	<br><br>
 	{% for tag in post.tags %}
 	<a class="tag">#{{ tag }}</a>
 	{% endfor %}
-	<br>
-	<i class="circular inverted green folder icon"></i>Topic: {{ post.topic }}
-	&nbsp;&nbsp;
-	<i class="circular inverted green calendar icon"></i>
-	{{ post.date | date: "%B %d, %Y"}}  	      
       </div>
-      <br><br>
       <div style="border-bottom: 2px solid lightgrey"></div>
       {% endfor %}
     </div>
@@ -37,7 +37,7 @@ title: Blog
     <div style="flex: 1;flex-grow: 1;padding-left: 25px">
       <h2 class="dividing">Categories</h2>
       {% for topic in site.topics %}
-      <a class="ui mini inverted green button"
+      <a class="button"
 	 style="margin:2px" href="{{ topic.url }}">{{ topic.name }}
       </a>
       {% endfor %}
