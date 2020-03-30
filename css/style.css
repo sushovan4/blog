@@ -8,6 +8,9 @@ body {
     padding-bottom: 100px;
 }
 
+a {
+    text-decoration: none;
+}
 #footer {
     background: black;
     color: white;
@@ -67,8 +70,12 @@ body {
     font-size: 16px;
     font-weight: bold;
     color: black;
+    transition: color 0.4s;
 }
 
+.menu > .item:hover, .right.items > .item:hover {
+    color: #C70039;
+}
 .menu > .right.items {
     position: absolute;
     right: 5px;
