@@ -8,40 +8,45 @@ title: Blog
 {% include masthead.html %}
 
 <br><br>
+
 <div class="container">
-  {% for post in site.posts %}
-  <div class="card">
-    <a href="{{ post.url }}">
-      <div class="title">  
-	<u><span style="color: #C70039;">&sect;</span>{{ post.title }}</u>
+  <div class="flex-container">    
+    <div style="flex: 1;flex-grow: 3">
+      {% for post in site.posts %}
+      <div class="card">
+	<a href="{{ post.url }}">
+	  <div class="title">  
+	    <u><span style="color: #C70039;">&sect;</span>{{ post.title }}</u>
+	  </div>
+	</a>
+	
+	{% for tag in post.tags %}
+	<a class="tag">#{{ tag }}</a>
+	{% endfor %}
+	<br>
+	<i class="circular inverted green folder icon"></i>Topic: {{ post.topic }}
+	&nbsp;&nbsp;
+	<i class="circular inverted green calendar icon"></i>
+	{{ post.date | date: "%B %d, %Y"}}  	      
       </div>
-    </a>
+      <br><br>
+      <div style="border-bottom: 2px solid lightgrey"></div>
+      {% endfor %}
+    </div>
 
-    {% for tag in post.tags %}
-    <a class="tag">#{{ tag }}</a>
-    {% endfor %}
-    <br>
-    <i class="circular inverted green folder icon"></i>Topic: {{ post.topic }}
-    &nbsp;&nbsp;
-    <i class="circular inverted green calendar icon"></i>
-    {{ post.date | date: "%B %d, %Y"}}  	      
+    <div style="flex: 1;flex-grow: 1;padding-left: 25px">
+      <h2 class="dividing">Categories</h2>
+      {% for topic in site.topics %}
+      <a class="ui mini inverted green button"
+	 style="margin:2px" href="{{ topic.url }}">{{ topic.name }}
+      </a>
+      {% endfor %}
+      
+      <br><br>
+      <h2 class="dividing">Tags</h2>
+      {% for tag in site.tags %}
+      <a class="tag" href="{{ category.url }}">#{{ tag[0] }}&nbsp;</a>
+      {% endfor %}
+    </div>
   </div>
-  <br><br>
-  <div style="border-bottom: 2px solid lightgrey"></div>
-  {% endfor %}
-  
-</div>
-
-<h3 class="ui dividing header">Categories</h3>
-{% for topic in site.topics %}
-<a class="ui mini inverted green button"
-   style="margin:2px" href="{{ topic.url }}">{{ topic.name }}
-</a>
-{% endfor %}
-
-<h3 class="ui dividing header">Tags</h3>
-{% for tag in site.tags %}
-<a class="styled" href="{{ category.url }}">#{{ tag[0] }}&nbsp;</a>
-{% endfor %}
-
 </div>
